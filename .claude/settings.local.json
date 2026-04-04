@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc:*)",
+      "Bash(python3 -c ':*)",
+      "Bash(cat /Volumes/PIPKA/Projects/Sweets-of-life/gen/sweetsoflife-next/postcss.config.*)",
+      "Bash(cp \"/Volumes/PIPKA/Projects/Sweets-of-life/Sweetsoflife.ru/Code/Pages/About/Fonts/BoblicRegular.woff\" \"/Volumes/PIPKA/Projects/Sweets-of-life/gen/sweetsoflife-next/public/fonts/\")",
+      "Bash(cp \"/Volumes/PIPKA/Projects/Sweets-of-life/Sweetsoflife.ru/Code/Pages/About/Fonts/BoblicRegular.ttf\" \"/Volumes/PIPKA/Projects/Sweets-of-life/gen/sweetsoflife-next/public/fonts/\")",
+      "Bash(cp \"/Volumes/PIPKA/Projects/Sweets-of-life/Sweetsoflife.ru/Code/Pages/About/Fonts/SCRIPTBL.TTF\" \"/Volumes/PIPKA/Projects/Sweets-of-life/gen/sweetsoflife-next/public/fonts/SCRIPTBL.ttf\")",
+      "Bash(cp \"/Volumes/PIPKA/Projects/Sweets-of-life/Sweetsoflife.ru/Code/Pages/About/Content/Backgrounds/BackGroundPattern_op.png\" \"/Volumes/PIPKA/Projects/Sweets-of-life/gen/sweetsoflife-next/public/images/patterns/bg-inner.png\")",
+      "Bash(cp \"/Volumes/PIPKA/Projects/Sweets-of-life/Sweetsoflife.ru/Code/Pages/About/Content/Backgrounds/BackGroundPattern2_op.png\" \"/Volumes/PIPKA/Projects/Sweets-of-life/gen/sweetsoflife-next/public/images/patterns/bg-outer.png\")",
+      "Bash(xargs cat:*)",
+      "Bash(cp /Volumes/PIPKA/Projects/Sweets-of-life/Sweetsoflife.ru/Code/Pages/Content/Pictures/MainPage/PrevieW_Pic/Mini/BC-PW.jpg /Volumes/PIPKA/Projects/Sweets-of-life/gen/sweetsoflife-next/public/images/categories/bracelets.jpg)",
+      "Bash(cp /Volumes/PIPKA/Projects/Sweets-of-life/Sweetsoflife.ru/Code/Pages/Content/Pictures/MainPage/PrevieW_Pic/Mini/BH-PW.jpg /Volumes/PIPKA/Projects/Sweets-of-life/gen/sweetsoflife-next/public/images/categories/brooches.jpg)",
+      "Bash(cp /Volumes/PIPKA/Projects/Sweets-of-life/Sweetsoflife.ru/Code/Pages/Content/Pictures/MainPage/PrevieW_Pic/Mini/ER-PW.jpg /Volumes/PIPKA/Projects/Sweets-of-life/gen/sweetsoflife-next/public/images/categories/earrings.jpg)",
+      "Bash(cp /Volumes/PIPKA/Projects/Sweets-of-life/Sweetsoflife.ru/Code/Pages/Content/Pictures/MainPage/PrevieW_Pic/Mini/PD-PW.jpg /Volumes/PIPKA/Projects/Sweets-of-life/gen/sweetsoflife-next/public/images/categories/pendants.jpg)",
+      "Bash(cp /Volumes/PIPKA/Projects/Sweets-of-life/Sweetsoflife.ru/Code/Pages/Content/Pictures/MainPage/PrevieW_Pic/Mini/RG-PW.jpg /Volumes/PIPKA/Projects/Sweets-of-life/gen/sweetsoflife-next/public/images/categories/rings.jpg)",
+      "Bash(grep -v '^$')",
+      "Bash(npx next:*)",
+      "Bash(npx eslint:*)",
+      "Bash(npm run:*)",
+      "Bash(find /Volumes/PIPKA/Projects/Sweets-of-life/Sweetsoflife.ru/Published -path \"*/Preview_Pic/*.jpg\" -exec cp {} /Volumes/PIPKA/Projects/Sweets-of-life/gen/sweetsoflife-next/public/images/products/preview/ \\\\;)",
+      "Bash(find /Volumes/PIPKA/Projects/Sweets-of-life/Sweetsoflife.ru/Published -path \"*/Product_Pic/*.jpg\" -exec cp {} /Volumes/PIPKA/Projects/Sweets-of-life/gen/sweetsoflife-next/public/images/products/full/ \\\\;)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); cats={}; [cats.update\\({p['category']: cats.get\\(p['category'],0\\)+1}\\) for p in d]; print\\(json.dumps\\(cats, indent=2\\)\\); print\\('total:', len\\(d\\)\\)\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('total news:', len\\(d\\)\\)\")"
+    ]
+  }
+}

@@ -1,0 +1,1426 @@
+[
+  {
+    "sku": "BC-0001",
+    "category": "bracelets",
+    "name": "Коричневый браслет",
+    "price": 350,
+    "type": "Браслет",
+    "material": "Дерево",
+    "decoration": "Декупаж, акриловые краски",
+    "size": "Диаметр 9см",
+    "description": "Узкий браслет на деревянной основе в коричневых тонах.",
+    "image": {
+      "full": "/images/products/full/BC-0001.jpg",
+      "preview": "/images/products/preview/BC-0001.jpg"
+    }
+  },
+  {
+    "sku": "BC-0002",
+    "category": "bracelets",
+    "name": "Узкий браслет",
+    "price": 300,
+    "type": "Браслет",
+    "material": "Дерево",
+    "decoration": "Декупаж",
+    "size": "Диаметр 9см",
+    "description": "Узкий оливковый браслет пастельных тонов. Выполнен на деревянной основе, декупаж снаружи и внутри.",
+    "image": {
+      "full": "/images/products/full/BC-0002.jpg",
+      "preview": "/images/products/preview/BC-0002.jpg"
+    }
+  },
+  {
+    "sku": "BC-0003",
+    "category": "bracelets",
+    "name": "Узкий браслет",
+    "price": 300,
+    "type": "Браслет",
+    "material": "Дерево",
+    "decoration": "Декупаж",
+    "size": "Диаметр 9см",
+    "description": "Узкий оливковый браслет пастельных тонов. Выполнен на деревянной основе, декупаж снаружи и внутри.",
+    "image": {
+      "full": "/images/products/full/BC-0003.jpg",
+      "preview": "/images/products/preview/BC-0003.jpg"
+    }
+  },
+  {
+    "sku": "BC-0004",
+    "category": "bracelets",
+    "name": "Африканский браслет",
+    "price": 500,
+    "type": "Браслет",
+    "material": "Дерево",
+    "decoration": "Декупаж",
+    "size": "Диаметр 9см",
+    "description": "Широкий браслет с африканскими напевами. Выполнен на деревянной основе декупаж снаружи и внутри.",
+    "image": {
+      "full": "/images/products/full/BC-0004.jpg",
+      "preview": "/images/products/preview/BC-0004.jpg"
+    }
+  },
+  {
+    "sku": "BC-0005",
+    "category": "bracelets",
+    "name": "Нежный браслет",
+    "price": 500,
+    "type": "Браслет",
+    "material": "Дерево",
+    "decoration": "Декупаж, акриловые краски",
+    "size": "Диаметр 9см",
+    "description": "Нежный широкий браслет с розами нежно-розовых оттенков. Выполнен на деревянной основе, внутри покрыт акриловыми красками.",
+    "image": {
+      "full": "/images/products/full/BC-0005.jpg",
+      "preview": "/images/products/preview/BC-0005.jpg"
+    }
+  },
+  {
+    "sku": "BC-0006",
+    "category": "bracelets",
+    "name": "Широкий браслет",
+    "price": 500,
+    "type": "Браслет",
+    "material": "Дерево",
+    "decoration": "Декупаж",
+    "size": "Диаметр 9см",
+    "description": "Широкий браслет. Выполнен на деревянной основе.",
+    "image": {
+      "full": "/images/products/full/BC-0006.jpg",
+      "preview": "/images/products/preview/BC-0006.jpg"
+    }
+  },
+  {
+    "sku": "BC-0007",
+    "category": "bracelets",
+    "name": "Узкий браслет",
+    "price": 300,
+    "type": "Браслет",
+    "material": "Дерево, акриловые краски",
+    "decoration": "Декупаж",
+    "size": "Диаметр 9см",
+    "description": "Узкий браслет со шнурами и подвесками, на деревянной основе, внутри покрыт красками.",
+    "image": {
+      "full": "/images/products/full/BC-0007.jpg",
+      "preview": "/images/products/preview/BC-0007.jpg"
+    }
+  },
+  {
+    "sku": "BC-0008",
+    "category": "bracelets",
+    "name": "Широкий браслет",
+    "price": 500,
+    "type": "Браслет",
+    "material": "Дерево, акриловые краски",
+    "decoration": "Декупаж",
+    "size": "Диаметр 9см",
+    "description": "Широкий браслет. Выполнен на деревянной основе.",
+    "image": {
+      "full": "/images/products/full/BC-0008.jpg",
+      "preview": "/images/products/preview/BC-0008.jpg"
+    }
+  },
+  {
+    "sku": "BC-0009",
+    "category": "bracelets",
+    "name": "Широкий браслет",
+    "price": 500,
+    "type": "Браслет",
+    "material": "Акриловые краски, ткань",
+    "decoration": "Декупаж",
+    "size": "Диаметр 9см",
+    "description": "Широкий браслет на деревянной основе.",
+    "image": {
+      "full": "/images/products/full/BC-0009.jpg",
+      "preview": "/images/products/preview/BC-0009.jpg"
+    }
+  },
+  {
+    "sku": "BH-0001",
+    "category": "brooches",
+    "name": "Латунная брошь",
+    "price": 450,
+    "type": "Брошь",
+    "material": "Латунь, глина",
+    "decoration": "Акриловые краски, стразы",
+    "size": "Диаметр 5см",
+    "description": "Брошка латунного цвета со вставкой с отпечатком настоящего листочка, раскрашенным акриловыми красками, и с голубыми и зелеными стразами.",
+    "image": {
+      "full": "/images/products/full/BH-0001.jpg",
+      "preview": "/images/products/preview/BH-0001.jpg"
+    }
+  },
+  {
+    "sku": "BH-0002",
+    "category": "brooches",
+    "name": "Шёлковая брошь",
+    "price": 300,
+    "type": "Брошь",
+    "material": "Шёлк",
+    "size": "Диаметр 5см",
+    "description": "Роза из нежного искусственного шелка. Крепится на булавку в любой одежде или резинке для волос, сумке и т.д.",
+    "image": {
+      "full": "/images/products/full/BH-0002.jpg",
+      "preview": "/images/products/preview/BH-0002.jpg"
+    }
+  },
+  {
+    "sku": "BH-0003",
+    "category": "brooches",
+    "name": "Латунная брошь",
+    "price": 450,
+    "type": "Брошь",
+    "material": "Латунь, глина",
+    "decoration": "Стразы, акриловые краски",
+    "size": "Диаметр 5см",
+    "description": "Брошка латунного цвета со вставкой с отпечатком настоящего листочка, раскрашенным акриловыми красками, и с голубыми и розовато-сиреневыми стразами.",
+    "image": {
+      "full": "/images/products/full/BH-0003.jpg",
+      "preview": "/images/products/preview/BH-0003.jpg"
+    }
+  },
+  {
+    "sku": "BH-0004",
+    "category": "brooches",
+    "name": "Брошь",
+    "price": 450,
+    "type": "Брошь",
+    "material": "Ткань",
+    "decoration": "Жемчужины",
+    "size": "Длина 9см",
+    "description": "Нарядная брошь",
+    "image": {
+      "full": "/images/products/full/BH-0004.jpg",
+      "preview": "/images/products/preview/BH-0004.jpg"
+    }
+  },
+  {
+    "sku": "BH-0005",
+    "category": "brooches",
+    "name": "Латунная брошь",
+    "price": 450,
+    "type": "Брошь",
+    "material": "Латунь, глина",
+    "decoration": "Стразы, акриловые краски",
+    "size": "Диаметр 5см",
+    "description": "Брошка латунного цвета со вставкой с отпечатком настоящего листочка, раскрашенным акриловыми красками, и с сиреневыми и зелеными стразами.",
+    "image": {
+      "full": "/images/products/full/BH-0005.jpg",
+      "preview": "/images/products/preview/BH-0005.jpg"
+    }
+  },
+  {
+    "sku": "BH-0006",
+    "category": "brooches",
+    "name": "Латунная брошь",
+    "price": 450,
+    "type": "Брошь",
+    "material": "Латунь, глина",
+    "decoration": "Стразы, акриловые краски",
+    "size": "Диаметр 5см",
+    "description": "Брошка латунного цвета со вставкой с отпечатком настоящего листочка, раскрашенным акриловыми красками, и с розовато-сиреневыми стразами.",
+    "image": {
+      "full": "/images/products/full/BH-0006.jpg",
+      "preview": "/images/products/preview/BH-0006.jpg"
+    }
+  },
+  {
+    "sku": "BH-0007",
+    "category": "brooches",
+    "name": "Латунная брошь",
+    "price": 450,
+    "type": "Брошь",
+    "material": "Латунь, глина",
+    "decoration": "Стразы, акриловые краски",
+    "size": "Диаметр 5см",
+    "description": "Брошка латунного цвета со вставкой с отпечатком настоящего листочка, раскрашенным акриловыми красками, и с розовато-сиреневыми стразами.",
+    "image": {
+      "full": "/images/products/full/BH-0007.jpg",
+      "preview": "/images/products/preview/BH-0007.jpg"
+    }
+  },
+  {
+    "sku": "ER-0001",
+    "category": "earrings",
+    "name": "Майанские напевы",
+    "price": 400,
+    "type": "Серьги",
+    "material": "Природный камень",
+    "hardware": "Сталь",
+    "size": "Диаметр 5см",
+    "description": "Серьги серебряного цвета с майанскими напевами и натуральными африканскими камушками красновато-розоватого цвета.",
+    "image": {
+      "full": "/images/products/full/ER-0001.jpg",
+      "preview": "/images/products/preview/ER-0001.jpg"
+    }
+  },
+  {
+    "sku": "ER-0002",
+    "category": "earrings",
+    "name": "Латунные серьги",
+    "price": 400,
+    "type": "Серьги",
+    "material": "Природный камень",
+    "hardware": "Латунь",
+    "size": "5см",
+    "description": "Серьги латунного цвета с натуральными камушками нежного мятного цвета.",
+    "image": {
+      "full": "/images/products/full/ER-0002.jpg",
+      "preview": "/images/products/preview/ER-0002.jpg"
+    }
+  },
+  {
+    "sku": "ER-0003",
+    "category": "earrings",
+    "name": "Серебряные серьги",
+    "price": 500,
+    "type": "Серьги",
+    "material": "Жемчуг",
+    "hardware": "Сталь",
+    "size": "5см",
+    "description": "Серьги серебряного цвета с майанскими напевами и натуральными крупными черными жемчужинами.",
+    "image": {
+      "full": "/images/products/full/ER-0003.jpg",
+      "preview": "/images/products/preview/ER-0003.jpg"
+    }
+  },
+  {
+    "sku": "ER-0004",
+    "category": "earrings",
+    "name": "Серебряные серьги",
+    "price": 450,
+    "type": "Серьги",
+    "material": "Коралл, вулканический камень",
+    "hardware": "Сталь",
+    "size": "5см",
+    "description": "Серьги серебряного цвета с майанскими напевами и черными вулканическими камушками и красными натуральными кораллами.",
+    "image": {
+      "full": "/images/products/full/ER-0004.jpg",
+      "preview": "/images/products/preview/ER-0004.jpg"
+    }
+  },
+  {
+    "sku": "ER-0005",
+    "category": "earrings",
+    "name": "Серебряные серьги",
+    "price": 350,
+    "type": "Серьги",
+    "material": "Жемчужины",
+    "hardware": "Сталь",
+    "size": "5см",
+    "description": "Серьги серебряного цвета с майанскими напевами и натуральными небольшими белыми жемчужинками.",
+    "image": {
+      "full": "/images/products/full/ER-0005.jpg",
+      "preview": "/images/products/preview/ER-0005.jpg"
+    }
+  },
+  {
+    "sku": "ER-0006",
+    "category": "earrings",
+    "name": "Серебряные серьги",
+    "price": 400,
+    "type": "Серьги",
+    "material": "Природный камень",
+    "hardware": "Сталь",
+    "size": "5см",
+    "description": "Серьги серебряного цвета с майанскими напевами и натуральными камушками нежно-мятного цвета.",
+    "image": {
+      "full": "/images/products/full/ER-0006.jpg",
+      "preview": "/images/products/preview/ER-0006.jpg"
+    }
+  },
+  {
+    "sku": "ER-0007",
+    "category": "earrings",
+    "name": "Воздушные серёжки",
+    "price": 350,
+    "type": "Серьги",
+    "material": "Коралл, природный камень",
+    "hardware": "Латунь",
+    "size": "5см",
+    "description": "Воздушные сережки латунного цвета с натуральным кораллом красного и розового цвета и натуральным камушком белого цвета.",
+    "image": {
+      "full": "/images/products/full/ER-0007.jpg",
+      "preview": "/images/products/preview/ER-0007.jpg"
+    }
+  },
+  {
+    "sku": "ER-0008",
+    "category": "earrings",
+    "name": "Золотые серьги",
+    "price": 500,
+    "type": "Серьги",
+    "material": "Стразы, натуральный камень",
+    "hardware": "Латунь",
+    "size": "5см",
+    "description": "Очень нарядные серьги золотого цвета со стразами и резными бусинами.",
+    "image": {
+      "full": "/images/products/full/ER-0008.jpg",
+      "preview": "/images/products/preview/ER-0008.jpg"
+    }
+  },
+  {
+    "sku": "ER-0009",
+    "category": "earrings",
+    "name": "Глиняные серьги",
+    "price": 400,
+    "type": "Серьги",
+    "material": "Глина",
+    "hardware": "Латунь",
+    "size": "Диаметр 4,5см",
+    "description": "Сережки с отпечатками настоящих листьев, раскрашенных акриловыми красками. Цвет сочной пепельное розы с голубым, фурнитура латунного цвета. Очень лёгкие.",
+    "image": {
+      "full": "/images/products/full/ER-0009.jpg",
+      "preview": "/images/products/preview/ER-0009.jpg"
+    }
+  },
+  {
+    "sku": "ER-0010",
+    "category": "earrings",
+    "name": "Глиняные серьги",
+    "price": 350,
+    "type": "Серьги",
+    "material": "Глина",
+    "hardware": "Латунь",
+    "size": "Длина 3см",
+    "description": "Сережки с отпечатками настоящих листьев, раскрашенных акриловыми красками. Цвет коралловый, фурнитура латунного цвета. Очень лёгкие.",
+    "image": {
+      "full": "/images/products/full/ER-0010.jpg",
+      "preview": "/images/products/preview/ER-0010.jpg"
+    }
+  },
+  {
+    "sku": "ER-0011",
+    "category": "earrings",
+    "name": "Глиняные серьги",
+    "price": 350,
+    "type": "Серьги",
+    "material": "Глина",
+    "hardware": "Сталь",
+    "size": "Диаметр 3см",
+    "description": "Сережки с отпечатками настоящих листьев, раскрашенных акриловыми красками. Цвет сиренево-розоватый, фурнитура золотого цвета. Очень лёгкие.",
+    "image": {
+      "full": "/images/products/full/ER-0011.jpg",
+      "preview": "/images/products/preview/ER-0011.jpg"
+    }
+  },
+  {
+    "sku": "ER-0012",
+    "category": "earrings",
+    "name": "Глиняные серьги",
+    "price": 300,
+    "type": "Серьги",
+    "material": "Глина",
+    "hardware": "Сталь",
+    "size": "Диаметр 2,5см",
+    "description": "Сережки с отпечатками настоящих листьев, раскрашенных акриловыми красками. Цвет голубой с коричневым, фурнитура серебряного цвета. Очень лёгкие.",
+    "image": {
+      "full": "/images/products/full/ER-0012.jpg",
+      "preview": "/images/products/preview/ER-0012.jpg"
+    }
+  },
+  {
+    "sku": "ER-0013",
+    "category": "earrings",
+    "name": "Глиняные серьги",
+    "price": 300,
+    "type": "Серьги",
+    "material": "Глина",
+    "hardware": "Латунь",
+    "size": "Диаметр 2,5см",
+    "description": "Серьги из серии «Земля». Желто-зеленые, латунная фурнитура, длина со швензами 6 см. Очень лёгкие.",
+    "image": {
+      "full": "/images/products/full/ER-0013.jpg",
+      "preview": "/images/products/preview/ER-0013.jpg"
+    }
+  },
+  {
+    "sku": "ER-0014",
+    "category": "earrings",
+    "name": "Глиняные серьги",
+    "price": 300,
+    "type": "Серьги",
+    "material": "Глина",
+    "hardware": "Сталь",
+    "size": "Диаметр 2,5см",
+    "description": "Серьги из серии «Огонь». Оранжево-красно-золотые, золотая фурнитура, длина сережек вместе со швензами 5,5 см. Очень лёгкие.",
+    "image": {
+      "full": "/images/products/full/ER-0014.jpg",
+      "preview": "/images/products/preview/ER-0014.jpg"
+    }
+  },
+  {
+    "sku": "ER-0015",
+    "category": "earrings",
+    "name": "Глиняные серьги",
+    "price": 300,
+    "type": "Серьги",
+    "material": "Глина",
+    "hardware": "Латунь",
+    "size": "Диаметр 2,5см",
+    "description": "Серьги из серии «Вода». Голубые с синим, латунная фурнитура, длина сережек вместе со швензами 5,5 см. Очень лёгкие.",
+    "image": {
+      "full": "/images/products/full/ER-0015.jpg",
+      "preview": "/images/products/preview/ER-0015.jpg"
+    }
+  },
+  {
+    "sku": "ER-0016",
+    "category": "earrings",
+    "name": "Глиняные серьги",
+    "price": 350,
+    "type": "Серьги",
+    "material": "Глина, сталь, бумага",
+    "hardware": "Сталь",
+    "size": "Диаметр 2,5см",
+    "description": "Длина сережек вместе со швензами и подвесками 8см. Можно сделать короткие швензы. Очень лёгкие.",
+    "image": {
+      "full": "/images/products/full/ER-0016.jpg",
+      "preview": "/images/products/preview/ER-0016.jpg"
+    }
+  },
+  {
+    "sku": "ER-0017",
+    "category": "earrings",
+    "name": "Глиняные серьги",
+    "price": 350,
+    "type": "Серьги",
+    "material": "Глина",
+    "hardware": "Латунь",
+    "size": "Диаметр 5см",
+    "description": "Сережки (часть комплекта) с отпечатками настоящих листьев, раскрашенных акриловыми красками. Цвет желтый с зеленым, фурнитура латунного цвета.",
+    "image": {
+      "full": "/images/products/full/ER-0017.jpg",
+      "preview": "/images/products/preview/ER-0017.jpg"
+    }
+  },
+  {
+    "sku": "ER-0018",
+    "category": "earrings",
+    "name": "Глиняные серьги",
+    "price": 350,
+    "type": "Серьги",
+    "material": "Глина",
+    "hardware": "Латунь",
+    "size": "Диаметр 3см",
+    "description": "Серьги (часть комплекта) с отпечатками настоящих листьев, раскрашенных акриловыми красками. Цвет сиреневый с красным, фурнитура латунного цвета.",
+    "image": {
+      "full": "/images/products/full/ER-0018.jpg",
+      "preview": "/images/products/preview/ER-0018.jpg"
+    }
+  },
+  {
+    "sku": "ER-0019",
+    "category": "earrings",
+    "name": "Глиняные серьги",
+    "price": 400,
+    "type": "Серьги",
+    "material": "Глина",
+    "hardware": "Латунь",
+    "size": "Диаметр 5см",
+    "description": "Сережки с отпечатками настоящих листьев, раскрашенных акриловыми красками. Цвет сине-голубой с бронзой, фурнитура латунного цвета.",
+    "image": {
+      "full": "/images/products/full/ER-0019.jpg",
+      "preview": "/images/products/preview/ER-0019.jpg"
+    }
+  },
+  {
+    "sku": "ER-0020",
+    "category": "earrings",
+    "name": "Латунные серьги",
+    "price": 400,
+    "type": "Серьги",
+    "material": "Природный камень",
+    "hardware": "Латунь",
+    "size": "Диаметр 5см",
+    "description": "Серьги латунного цвета с натуральными камушками.",
+    "image": {
+      "full": "/images/products/full/ER-0020.jpg",
+      "preview": "/images/products/preview/ER-0020.jpg"
+    }
+  },
+  {
+    "sku": "ER-0021",
+    "category": "earrings",
+    "name": "Латунные серьги",
+    "price": 300,
+    "type": "Серьги",
+    "material": "Латунь",
+    "hardware": "Латунь",
+    "size": "Диаметр 5см",
+    "description": "Павлины золотого цвета, стразы голубые и сиреневые, хвосты раскрашены красками.",
+    "image": {
+      "full": "/images/products/full/ER-0021.jpg",
+      "preview": "/images/products/preview/ER-0021.jpg"
+    }
+  },
+  {
+    "sku": "ER-0022",
+    "category": "earrings",
+    "name": "Глиняные серьги",
+    "price": 400,
+    "type": "Серьги",
+    "material": "Глина",
+    "hardware": "Латунь",
+    "size": "Диаметр 5см",
+    "description": "Большие, но легкие серьги, расписанные красками по отпечаткам листьев, с бронзовой фурнитурой.",
+    "image": {
+      "full": "/images/products/full/ER-0022.jpg",
+      "preview": "/images/products/preview/ER-0022.jpg"
+    }
+  },
+  {
+    "sku": "ER-0023",
+    "category": "earrings",
+    "name": "Глиняные серьги",
+    "price": 300,
+    "type": "Серьги",
+    "material": "Глина",
+    "hardware": "Сталь",
+    "size": "Диаметр 5см",
+    "description": "Маленькие изящные подвески сине-голубого цвета с серебряными прожилками по отпечаткам листьев на серебряной фурнитуре.",
+    "image": {
+      "full": "/images/products/full/ER-0023.jpg",
+      "preview": "/images/products/preview/ER-0023.jpg"
+    }
+  },
+  {
+    "sku": "ER-0024",
+    "category": "earrings",
+    "name": "Серьги",
+    "price": 250,
+    "type": "Серьги",
+    "material": "Ювелирная смола",
+    "hardware": "Сталь",
+    "size": "5см",
+    "description": "Сережки полупрозрачные, с золотой фурнитурой. Не очень длинные, но широкие.",
+    "image": {
+      "full": "/images/products/full/ER-0024.jpg",
+      "preview": "/images/products/preview/ER-0024.jpg"
+    }
+  },
+  {
+    "sku": "ER-0025",
+    "category": "earrings",
+    "name": "Баночки с сиренью",
+    "price": 350,
+    "type": "Серьги",
+    "material": "Ювелирная смола, стекло",
+    "hardware": "Сталь",
+    "size": "2,5см",
+    "description": "Баночки с сиренью. Высота вместе с пробкой 2,5 см, ширина 1,5 см.",
+    "image": {
+      "full": "/images/products/full/ER-0025.jpg",
+      "preview": "/images/products/preview/ER-0025.jpg"
+    }
+  },
+  {
+    "sku": "ER-0026",
+    "category": "earrings",
+    "name": "Серьги",
+    "price": 300,
+    "type": "Серьги",
+    "material": "Ювелирная смола",
+    "hardware": "Латунь",
+    "size": "3,5см",
+    "description": "Капли с желтыми цветочками акации.",
+    "image": {
+      "full": "/images/products/full/ER-0026.jpg",
+      "preview": "/images/products/preview/ER-0026.jpg"
+    }
+  },
+  {
+    "sku": "ER-0027",
+    "category": "earrings",
+    "name": "Серьги",
+    "price": 300,
+    "type": "Серьги",
+    "material": "Ювелирная смола",
+    "hardware": "Сталь",
+    "size": "2,5см",
+    "description": "Одуванчики!",
+    "image": {
+      "full": "/images/products/full/ER-0027.jpg",
+      "preview": "/images/products/preview/ER-0027.jpg"
+    }
+  },
+  {
+    "sku": "ER-0028",
+    "category": "earrings",
+    "name": "Серьги",
+    "price": 250,
+    "type": "Серьги",
+    "material": "Ювелирная смола",
+    "hardware": "Сталь",
+    "size": "2см",
+    "description": "Сережки с желтенькими цветочками акации.",
+    "image": {
+      "full": "/images/products/full/ER-0028.jpg",
+      "preview": "/images/products/preview/ER-0028.jpg"
+    }
+  },
+  {
+    "sku": "ER-0029",
+    "category": "earrings",
+    "name": "Серьги",
+    "price": 300,
+    "type": "Серьги",
+    "material": "Ювелирная смола",
+    "hardware": "Латунь",
+    "size": "3см",
+    "description": "Сережки с желтенькими цветочками.",
+    "image": {
+      "full": "/images/products/full/ER-0029.jpg",
+      "preview": "/images/products/preview/ER-0029.jpg"
+    }
+  },
+  {
+    "sku": "ER-0030",
+    "category": "earrings",
+    "name": "Серьги",
+    "price": 250,
+    "type": "Серьги",
+    "material": "Ювелирная смола",
+    "hardware": "Сталь",
+    "size": "1,5см",
+    "description": "Желтенькие цветочки на длинной швензе. Длина вместе со швензой 5 см, диаметр подвески 1,5 см.",
+    "image": {
+      "full": "/images/products/full/ER-0030.jpg",
+      "preview": "/images/products/preview/ER-0030.jpg"
+    }
+  },
+  {
+    "sku": "ER-0031",
+    "category": "earrings",
+    "name": "Серьги",
+    "price": 250,
+    "type": "Серьги",
+    "material": "Ювелирная смола",
+    "hardware": "Сталь",
+    "size": "1,5см",
+    "description": "Желтенькие цветочки на длинной швензе. Длина вместе со швензой 5 см, диаметр подвески 1,5 см.",
+    "image": {
+      "full": "/images/products/full/ER-0031.jpg",
+      "preview": "/images/products/preview/ER-0031.jpg"
+    }
+  },
+  {
+    "sku": "ER-0032",
+    "category": "earrings",
+    "name": "Серьги",
+    "price": 250,
+    "type": "Серьги",
+    "material": "Ювелирная смола",
+    "hardware": "Сталь",
+    "size": "1см",
+    "description": "Незабудки на длинной швензе. Длина вместе со швензой чуть меньше 5 см. Диаметр шара 1 см.",
+    "image": {
+      "full": "/images/products/full/ER-0032.jpg",
+      "preview": "/images/products/preview/ER-0032.jpg"
+    }
+  },
+  {
+    "sku": "ER-0033",
+    "category": "earrings",
+    "name": "Серьги",
+    "price": 150,
+    "type": "Серьги",
+    "material": "Жемчужины",
+    "hardware": "Сталь",
+    "size": "1см",
+    "description": "Чешские жемчужные бусины.",
+    "image": {
+      "full": "/images/products/full/ER-0033.jpg",
+      "preview": "/images/products/preview/ER-0033.jpg"
+    }
+  },
+  {
+    "sku": "ER-0034",
+    "category": "earrings",
+    "name": "Серьги",
+    "price": 150,
+    "type": "Серьги",
+    "material": "Металл",
+    "hardware": "Сталь",
+    "size": "2см",
+    "description": "Сережки азиатские бубенцы золотистого цвета с покраской, стилизованной под эмаль.",
+    "image": {
+      "full": "/images/products/full/ER-0034.jpg",
+      "preview": "/images/products/preview/ER-0034.jpg"
+    }
+  },
+  {
+    "sku": "ER-0035",
+    "category": "earrings",
+    "name": "Серьги",
+    "price": 100,
+    "type": "Серьги",
+    "material": "Металл",
+    "hardware": "Сталь",
+    "size": "1,5см",
+    "description": "Сережки азиатские бубенцы золотистого цвета с покраской, стилизованной под эмаль.",
+    "image": {
+      "full": "/images/products/full/ER-0035.jpg",
+      "preview": "/images/products/preview/ER-0035.jpg"
+    }
+  },
+  {
+    "sku": "ER-0036",
+    "category": "earrings",
+    "name": "Серьги",
+    "price": 250,
+    "type": "Серьги",
+    "material": "Ювелирная смола",
+    "hardware": "Сталь",
+    "size": "1,5см",
+    "description": "Сережки с одуванчиками.",
+    "image": {
+      "full": "/images/products/full/ER-0036.jpg",
+      "preview": "/images/products/preview/ER-0036.jpg"
+    }
+  },
+  {
+    "sku": "ER-0037",
+    "category": "earrings",
+    "name": "Серьги",
+    "price": 250,
+    "type": "Серьги",
+    "material": "Ювелирная смола",
+    "hardware": "Латунь",
+    "size": "1,5см",
+    "description": "Рябиновые льдинки.",
+    "image": {
+      "full": "/images/products/full/ER-0037.jpg",
+      "preview": "/images/products/preview/ER-0037.jpg"
+    }
+  },
+  {
+    "sku": "ER-0038",
+    "category": "earrings",
+    "name": "Серьги",
+    "price": 300,
+    "type": "Серьги",
+    "material": "Ювелирная смола",
+    "hardware": "Сталь",
+    "size": "2,5см",
+    "description": "Серёжки с сиренью.",
+    "image": {
+      "full": "/images/products/full/ER-0038.jpg",
+      "preview": "/images/products/preview/ER-0038.jpg"
+    }
+  },
+  {
+    "sku": "ER-0039",
+    "category": "earrings",
+    "name": "Серьги",
+    "price": 350,
+    "type": "Серьги",
+    "material": "Ювелирная смола",
+    "hardware": "Сталь",
+    "size": "5см",
+    "description": "Серёжки с одуванчиками.",
+    "image": {
+      "full": "/images/products/full/ER-0039.jpg",
+      "preview": "/images/products/preview/ER-0039.jpg"
+    }
+  },
+  {
+    "sku": "PD-0001",
+    "category": "pendants",
+    "name": "Колье",
+    "price": 400,
+    "type": "Колье",
+    "material": "Ткань, бисер",
+    "hardware": "Сталь",
+    "size": "Длина 55см",
+    "description": "Колье 55 см + 5 см на регулировку длины.",
+    "image": {
+      "full": "/images/products/full/PD-0001.jpg",
+      "preview": "/images/products/preview/PD-0001.jpg"
+    }
+  },
+  {
+    "sku": "PD-0002",
+    "category": "pendants",
+    "name": "Подвеска",
+    "price": 300,
+    "type": "Подвеска",
+    "material": "Сталь, глина",
+    "hardware": "Сталь",
+    "size": "Диаметр 7см",
+    "description": "Подвеска с цепочкой серебряного цвета со вставкой с отпечатком настоящего листочка, раскрашенным акриловыми красками.",
+    "image": {
+      "full": "/images/products/full/PD-0002.jpg",
+      "preview": "/images/products/preview/PD-0002.jpg"
+    }
+  },
+  {
+    "sku": "PD-0003",
+    "category": "pendants",
+    "name": "Колье",
+    "price": 450,
+    "type": "Колье",
+    "material": "Латунь, глина",
+    "hardware": "Латунь",
+    "size": "Длина 45см",
+    "description": "Колье (часть комплекта) с отпечатками настоящих листьев, раскрашенных акриловыми красками. Цвет сиреневый с красным, фурнитура латунного цвета.",
+    "image": {
+      "full": "/images/products/full/PD-0003.jpg",
+      "preview": "/images/products/preview/PD-0003.jpg"
+    }
+  },
+  {
+    "sku": "PD-0004",
+    "category": "pendants",
+    "name": "Подвеска-баночка",
+    "price": 400,
+    "type": "Подвеска",
+    "material": "Стекло, розы",
+    "hardware": "Латунь",
+    "size": "5см",
+    "description": "Подвеска-баночка с бутонами роз на цепочке.",
+    "image": {
+      "full": "/images/products/full/PD-0004.jpg",
+      "preview": "/images/products/preview/PD-0004.jpg"
+    }
+  },
+  {
+    "sku": "PD-0005",
+    "category": "pendants",
+    "name": "Подвеска-сфера",
+    "price": 450,
+    "type": "Подвеска",
+    "material": "Стекло, розы",
+    "hardware": "Латунь",
+    "size": "3см",
+    "description": "Подвеска-сфера с бутонами роз на цепочке.",
+    "image": {
+      "full": "/images/products/full/PD-0005.jpg",
+      "preview": "/images/products/preview/PD-0005.jpg"
+    }
+  },
+  {
+    "sku": "PD-0006",
+    "category": "pendants",
+    "name": "Подвеска",
+    "price": 150,
+    "type": "Подвеска",
+    "material": "Ракушка",
+    "hardware": "Ткань",
+    "size": "5см",
+    "description": "Подвеска из настоящей ракушки, истертой в море, на капроновом шнуре.",
+    "image": {
+      "full": "/images/products/full/PD-0006.jpg",
+      "preview": "/images/products/preview/PD-0006.jpg"
+    }
+  },
+  {
+    "sku": "PD-0007",
+    "category": "pendants",
+    "name": "Колье",
+    "price": 150,
+    "type": "Колье",
+    "material": "Кокос",
+    "hardware": "Ткань",
+    "size": "Регулируется",
+    "description": "Рыбки и фруктики из крашеного кокоса.",
+    "image": {
+      "full": "/images/products/full/PD-0007.jpg",
+      "preview": "/images/products/preview/PD-0007.jpg"
+    }
+  },
+  {
+    "sku": "RG-0001",
+    "category": "rings",
+    "name": "Кольцо",
+    "price": 450,
+    "type": "Кольцо",
+    "material": "Латунь",
+    "decoration": "Глина, акриловые краски",
+    "size": "Регулируется",
+    "description": "Колечко латунного цвета со вставкой с отпечатком настоящего листика, раскрашенным акриловыми красками.",
+    "image": {
+      "full": "/images/products/full/RG-0001.jpg",
+      "preview": "/images/products/preview/RG-0001.jpg"
+    }
+  },
+  {
+    "sku": "RG-0002",
+    "category": "rings",
+    "name": "Кольцо",
+    "price": 350,
+    "type": "Кольцо",
+    "material": "Латунь",
+    "decoration": "Глина, акриловые краски",
+    "size": "Регулируется",
+    "description": "Колечко латунного цвета со вставкой с отпечатком настоящего листика, раскрашенным акриловыми красками. Размер регулируется.",
+    "image": {
+      "full": "/images/products/full/RG-0002.jpg",
+      "preview": "/images/products/preview/RG-0002.jpg"
+    }
+  },
+  {
+    "sku": "RG-0003",
+    "category": "rings",
+    "name": "Кольцо",
+    "price": 350,
+    "type": "Кольцо",
+    "material": "Латунь",
+    "decoration": "Глина, акриловые краски",
+    "size": "Регулируется",
+    "description": "Колечко (часть комплекта) латунного цвета со вставкой с отпечатком настоящего листика, раскрашенным акриловыми красками. Размер регулируется.",
+    "image": {
+      "full": "/images/products/full/RG-0003.jpg",
+      "preview": "/images/products/preview/RG-0003.jpg"
+    }
+  },
+  {
+    "sku": "RG-0004",
+    "category": "rings",
+    "name": "Кольцо",
+    "price": 350,
+    "type": "Кольцо",
+    "material": "Латунь",
+    "decoration": "Глина, акриловые краски",
+    "size": "Регулируется",
+    "description": "Колечко латунного цвета со вставкой с отпечатком настоящего листика, раскрашенным акриловыми красками. Размер регулируется.",
+    "image": {
+      "full": "/images/products/full/RG-0004.jpg",
+      "preview": "/images/products/preview/RG-0004.jpg"
+    }
+  },
+  {
+    "sku": "RG-0005",
+    "category": "rings",
+    "name": "Кольцо",
+    "price": 350,
+    "type": "Кольцо",
+    "material": "Латунь",
+    "decoration": "Глина, акриловые краски",
+    "size": "Регулируется",
+    "description": "Колечко латунного цвета со вставкой с отпечатком настоящего листика, раскрашенным акриловыми красками. Размер регулируется.",
+    "image": {
+      "full": "/images/products/full/RG-0005.jpg",
+      "preview": "/images/products/preview/RG-0005.jpg"
+    }
+  },
+  {
+    "sku": "RG-0006",
+    "category": "rings",
+    "name": "Кольцо",
+    "price": 350,
+    "type": "Кольцо",
+    "material": "Латунь",
+    "decoration": "Глина, акриловые краски",
+    "size": "Регулируется",
+    "description": "Кольцо (часть комплекта) с отпечатками настоящих листьев, раскрашенных акриловыми красками. Цвет сиреневый с красным, фурнитура латунного цвета.",
+    "image": {
+      "full": "/images/products/full/RG-0006.jpg",
+      "preview": "/images/products/preview/RG-0006.jpg"
+    }
+  },
+  {
+    "sku": "RG-0007",
+    "category": "rings",
+    "name": "Кольцо",
+    "price": 350,
+    "type": "Кольцо",
+    "material": "Латунь",
+    "decoration": "Стекло, цветок",
+    "size": "Регулируется",
+    "description": "Колечко латунного цвета со стеклянным куполом с цветочком внутри. Размер регулируется.",
+    "image": {
+      "full": "/images/products/full/RG-0007.jpg",
+      "preview": "/images/products/preview/RG-0007.jpg"
+    }
+  },
+  {
+    "sku": "ST-0001",
+    "category": "sets",
+    "name": "Набор",
+    "price": 750,
+    "type": "Набор",
+    "material": "Латунь",
+    "decoration": "Глина, акриловые краски",
+    "size": "Регулируется",
+    "description": "Сережки и подвеска с отпечатками самых настоящих листьев, раскрашенных акриловыми красками. Цвет коричневый с малиновым, фурнитура латунного цвета.",
+    "image": {
+      "full": "/images/products/full/ST-0001.jpg",
+      "preview": "/images/products/preview/ST-0001.jpg"
+    }
+  },
+  {
+    "sku": "ST-0002",
+    "category": "sets",
+    "name": "Набор",
+    "price": 850,
+    "type": "Набор",
+    "material": "Латунь",
+    "decoration": "Глина, акриловые краски",
+    "size": "Регулируется",
+    "description": "Сережки и подвеска с отпечатками настоящих листьев, раскрашенных акриловыми красками. Цвет мятно-голубой, фурнитура серебряного цвета, лента из органзы и вощеных шнуров с регулируемой длиной. Очень лёгкие.",
+    "image": {
+      "full": "/images/products/full/ST-0002.jpg",
+      "preview": "/images/products/preview/ST-0002.jpg"
+    }
+  },
+  {
+    "sku": "ST-0003",
+    "category": "sets",
+    "name": "Набор",
+    "price": 850,
+    "type": "Набор",
+    "material": "Латунь",
+    "decoration": "Глина, акриловые краски",
+    "size": "Регулируется",
+    "description": "Сережки и подвеска с отпечатками настоящих листьев, раскрашенных акриловыми красками. Цвет серебряный с черным и белым, фурнитура цвета графита, цепочка 37 см с регулируемой длиной. Очень лёгкие.",
+    "image": {
+      "full": "/images/products/full/ST-0003.jpg",
+      "preview": "/images/products/preview/ST-0003.jpg"
+    }
+  },
+  {
+    "sku": "ST-0004",
+    "category": "sets",
+    "name": "Набор",
+    "price": 850,
+    "type": "Набор",
+    "material": "Сталь",
+    "decoration": "Глина, акриловые краски",
+    "size": "Регулируется",
+    "description": "Сережки и колье с отпечатками настоящих листьев, раскрашенных акриловыми красками. Цвет салатовый с синим, фурнитура серебряного цвета. Очень лёгкие.",
+    "image": {
+      "full": "/images/products/full/ST-0004.jpg",
+      "preview": "/images/products/preview/ST-0004.jpg"
+    }
+  },
+  {
+    "sku": "ST-0005",
+    "category": "sets",
+    "name": "Набор",
+    "price": 800,
+    "type": "Набор",
+    "material": "Сталь",
+    "decoration": "Глина, акриловые краски",
+    "size": "Регулируется",
+    "description": "Сережки и колье с отпечатками настоящих листьев, раскрашенных акриловыми красками. Цвет голубой с коричневым, фурнитура серебряного цвета. Очень лёгкие.",
+    "image": {
+      "full": "/images/products/full/ST-0005.jpg",
+      "preview": "/images/products/preview/ST-0005.jpg"
+    }
+  },
+  {
+    "sku": "ST-0006",
+    "category": "sets",
+    "name": "Набор «Земля»",
+    "price": 850,
+    "type": "Набор",
+    "material": "Ткань, бисер",
+    "decoration": "Глина, акриловые краски",
+    "size": "Регулируется",
+    "description": "Комплект зеленого цвета с желтыми нотками, фурнитура латунного и бронзового цвета. Длина шнура 48 см, длина подвески 3 см, длина сережек вместе со швензами 6 см, длина браслета 20,5 см.",
+    "image": {
+      "full": "/images/products/full/ST-0006.jpg",
+      "preview": "/images/products/preview/ST-0006.jpg"
+    }
+  },
+  {
+    "sku": "ST-0007",
+    "category": "sets",
+    "name": "Набор «Огонь»",
+    "price": 850,
+    "type": "Набор",
+    "material": "Ткань, бисер",
+    "decoration": "Глина, акриловые краски",
+    "size": "Регулируется",
+    "description": "Комплект красного цвета с оранжево-золотыми нотками, фурнитура золотого цвета. Длина шнура 45 см, длина подвески 3,5 см, длина сережек вместе со швензами 5,5 см, длина браслета 18,5 см.",
+    "image": {
+      "full": "/images/products/full/ST-0007.jpg",
+      "preview": "/images/products/preview/ST-0007.jpg"
+    }
+  },
+  {
+    "sku": "ST-0008",
+    "category": "sets",
+    "name": "Набор «Вода»",
+    "price": 850,
+    "type": "Набор",
+    "material": "Ткань, бисер",
+    "decoration": "Глина, акриловые краски",
+    "size": "Регулируется",
+    "description": "Комплект сине-голубого цвета, фурнитура латунного цвета. Длина шнура 47 см, длина подвески 3,5 см, длина сережек вместе со швензами 5,5 см, длина браслета 20,5 см.",
+    "image": {
+      "full": "/images/products/full/ST-0008.jpg",
+      "preview": "/images/products/preview/ST-0008.jpg"
+    }
+  },
+  {
+    "sku": "ST-0009",
+    "category": "sets",
+    "name": "Набор",
+    "price": 600,
+    "type": "Набор",
+    "material": "Латунь",
+    "decoration": "Глина, акриловые краски",
+    "size": "Регулируется",
+    "description": "Комплект с отпечатками настоящих листьев, раскрашенных акриловыми красками. Цвет желтый с зеленым, фурнитура латунного цвета. Размер кольца регулируется.",
+    "image": {
+      "full": "/images/products/full/ST-0009.jpg",
+      "preview": "/images/products/preview/ST-0009.jpg"
+    }
+  },
+  {
+    "sku": "ST-0010",
+    "category": "sets",
+    "name": "Набор",
+    "price": 1000,
+    "type": "Набор",
+    "material": "Латунь",
+    "decoration": "Глина, акриловые краски",
+    "size": "Регулируется",
+    "description": "Комплект с отпечатками настоящих листьев, раскрашенных акриловыми красками. Цвет сиреневый с красным, фурнитура латунного цвета. Размер кольца регулируется.",
+    "image": {
+      "full": "/images/products/full/ST-0010.jpg",
+      "preview": "/images/products/preview/ST-0010.jpg"
+    }
+  },
+  {
+    "sku": "ST-0011",
+    "category": "sets",
+    "name": "Набор",
+    "price": 500,
+    "type": "Набор",
+    "material": "Латунь",
+    "decoration": "Акриловые краски, стразы",
+    "size": "Регулируется",
+    "description": "Комплект с павлинами золотого цвета, стразы голубые и сиреневые, хвосты раскрашены красками.",
+    "image": {
+      "full": "/images/products/full/ST-0011.jpg",
+      "preview": "/images/products/preview/ST-0011.jpg"
+    }
+  },
+  {
+    "sku": "ST-0012",
+    "category": "sets",
+    "name": "Набор",
+    "price": 500,
+    "type": "Набор",
+    "material": "Сталь",
+    "decoration": "Глина, акриловые краски",
+    "size": "Регулируется",
+    "description": "Желто-голубо-серебряный комплект с росписью по отпечаткам листьев и подвеской-рыбкой.",
+    "image": {
+      "full": "/images/products/full/ST-0012.jpg",
+      "preview": "/images/products/preview/ST-0012.jpg"
+    }
+  },
+  {
+    "sku": "ST-0013",
+    "category": "sets",
+    "name": "Набор",
+    "price": 800,
+    "type": "Набор",
+    "material": "Дерево",
+    "decoration": "Ткань, искусственная кожа",
+    "size": "Регулируется",
+    "description": "Комплект из джинсы и деревянных бусин на белом шнуре из искусственной кожи, фурнитура серебряного цвета.",
+    "image": {
+      "full": "/images/products/full/ST-0013.jpg",
+      "preview": "/images/products/preview/ST-0013.jpg"
+    }
+  },
+  {
+    "sku": "TR-0001",
+    "category": "tiaras",
+    "name": "Диадема",
+    "price": 700,
+    "type": "Диадема",
+    "material": "Пластик",
+    "decoration": "Ткань, жемчужины, стразы",
+    "size": "Регулируется",
+    "description": "Корона-диадема для любого торжества и праздника. Бело-золотая с искусственными чешскими жемчужинами и стразами.",
+    "image": {
+      "full": "/images/products/full/TR-0001.jpg",
+      "preview": "/images/products/preview/TR-0001.jpg"
+    }
+  },
+  {
+    "sku": "TR-0002",
+    "category": "tiaras",
+    "name": "Диадема",
+    "price": 600,
+    "type": "Корона",
+    "material": "Пластик",
+    "decoration": "Ткань, жемчужины",
+    "size": "Регулируется",
+    "description": "Корона-кокошник бело-оранжевого цвета с искусственными жемчужинами.",
+    "image": {
+      "full": "/images/products/full/TR-0002.jpg",
+      "preview": "/images/products/preview/TR-0002.jpg"
+    }
+  },
+  {
+    "sku": "TY-0001",
+    "category": "toys",
+    "name": "Слон Джакая",
+    "price": 400,
+    "type": "Игрушка",
+    "material": "Шёлк",
+    "decoration": "Атласные ленты, золотой картон",
+    "size": "12см",
+    "description": "Джакая — это добродушный африканский слон. Его шкурка из искусственного шелка очень приятна на ощупь. Ростом он около 12 см. Этнический пояс сделан из атласных лент с медальонами из золотого картона. Возможно пришить к нему колечко и всегда носить с собой.",
+    "image": {
+      "full": "/images/products/full/TY-0001.jpg",
+      "preview": "/images/products/preview/TY-0001.jpg"
+    }
+  },
+  {
+    "sku": "TY-0002",
+    "category": "toys",
+    "name": "Тобик",
+    "price": 250,
+    "type": "Игрушка",
+    "material": "Ткань",
+    "decoration": "Атласная лента",
+    "size": "7см",
+    "description": "Послушный, но с характером кроха Тобик. Может стать как брошкой, так и брелком по вашему желанию.",
+    "image": {
+      "full": "/images/products/full/TY-0002.jpg",
+      "preview": "/images/products/preview/TY-0002.jpg"
+    }
+  },
+  {
+    "sku": "TY-0003",
+    "category": "toys",
+    "name": "Арчи",
+    "price": 250,
+    "type": "Игрушка",
+    "material": "Шерсть",
+    "decoration": "Атласная лента",
+    "size": "7см",
+    "description": "Мягкий пушистый шерстяной малыш Арчи. Может стать как брелком, так и брошкой.",
+    "image": {
+      "full": "/images/products/full/TY-0003.jpg",
+      "preview": "/images/products/preview/TY-0003.jpg"
+    }
+  },
+  {
+    "sku": "TY-0004",
+    "category": "toys",
+    "name": "Джузе",
+    "price": 250,
+    "type": "Игрушка",
+    "material": "Шерсть",
+    "decoration": "Атласная лента",
+    "size": "7см",
+    "description": "Шерстяной Джузе. Может стать как брелком, так и брошкой.",
+    "image": {
+      "full": "/images/products/full/TY-0004.jpg",
+      "preview": "/images/products/preview/TY-0004.jpg"
+    }
+  },
+  {
+    "sku": "TY-0005",
+    "category": "toys",
+    "name": "Сьюзи",
+    "price": 250,
+    "type": "Игрушка",
+    "material": "Ткань",
+    "decoration": "Атласная лента",
+    "size": "9см",
+    "description": "Балерина Сюзи. Может стать как брелком, так и брошкой.",
+    "image": {
+      "full": "/images/products/full/TY-0005.jpg",
+      "preview": "/images/products/preview/TY-0005.jpg"
+    }
+  },
+  {
+    "sku": "TY-0006",
+    "category": "toys",
+    "name": "Том",
+    "price": 250,
+    "type": "Игрушка",
+    "material": "Ткань",
+    "decoration": "Атласная лента",
+    "size": "7см",
+    "description": "Брошка-крошка Том.",
+    "image": {
+      "full": "/images/products/full/TY-0006.jpg",
+      "preview": "/images/products/preview/TY-0006.jpg"
+    }
+  },
+  {
+    "sku": "TY-0007",
+    "category": "toys",
+    "name": "Кот Леопольд",
+    "price": 250,
+    "type": "Игрушка",
+    "material": "Ткань",
+    "decoration": "Атласная лента",
+    "size": "7см",
+    "description": "Брошка Интеллигентный Кот Леопольд.",
+    "image": {
+      "full": "/images/products/full/TY-0007.jpg",
+      "preview": "/images/products/preview/TY-0007.jpg"
+    }
+  },
+  {
+    "sku": "TY-0008",
+    "category": "toys",
+    "name": "Бакси",
+    "price": 250,
+    "type": "Игрушка",
+    "material": "Ткань",
+    "decoration": "Атласная лента",
+    "size": "7см",
+    "description": "Брошка крошка Бакси.",
+    "image": {
+      "full": "/images/products/full/TY-0008.jpg",
+      "preview": "/images/products/preview/TY-0008.jpg"
+    }
+  },
+  {
+    "sku": "TY-0009",
+    "category": "toys",
+    "name": "Гайди",
+    "price": 250,
+    "type": "Игрушка",
+    "material": "Ткань",
+    "decoration": "Атласная лента",
+    "size": "9см",
+    "description": "Монохромная рыбка Гайди.",
+    "image": {
+      "full": "/images/products/full/TY-0009.jpg",
+      "preview": "/images/products/preview/TY-0009.jpg"
+    }
+  },
+  {
+    "sku": "TY-0010",
+    "category": "toys",
+    "name": "Чудо-юдо",
+    "price": 250,
+    "type": "Игрушка",
+    "material": "Ткань",
+    "decoration": "Бисер",
+    "size": "7см",
+    "description": "Брошка Чудо-юдо рыба-кит.",
+    "image": {
+      "full": "/images/products/full/TY-0010.jpg",
+      "preview": "/images/products/preview/TY-0010.jpg"
+    }
+  },
+  {
+    "sku": "TY-0011",
+    "category": "toys",
+    "name": "Стивен",
+    "price": 250,
+    "type": "Игрушка",
+    "material": "Ткань",
+    "decoration": "Лента",
+    "size": "7см",
+    "description": "Брошка котейка Стивен.",
+    "image": {
+      "full": "/images/products/full/TY-0011.jpg",
+      "preview": "/images/products/preview/TY-0011.jpg"
+    }
+  }
+]

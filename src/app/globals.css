@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "BoblicRegular";
+  src:
+    url("/fonts/BoblicRegular.woff") format("woff"),
+    url("/fonts/BoblicRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SCRIPTBL";
+  src: url("/fonts/SCRIPTBL.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-boblic: "BoblicRegular", serif;
+  --font-script: "SCRIPTBL", cursive;
+  --color-brand: #1e5945;
+  --color-brand-light: #40d39d;
+}
+
+body {
+  font-family: var(--font-boblic);
+  color: var(--color-brand);
+  background-image: url("/images/patterns/bg-outer.png");
+}
+
+/* Background pattern utilities */
+.bg-pattern-outer {
+  background-image: url("/images/patterns/bg-outer.png");
+}
+
+.bg-pattern-inner {
+  background-image: url("/images/patterns/bg-inner.png");
+  background-repeat: repeat;
+}
