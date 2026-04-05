@@ -40,6 +40,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+.claude
+
 AGENTS.md
 
 sweets-of-lie-migration-plan.md
