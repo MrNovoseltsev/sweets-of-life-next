@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { CartProvider } from "@/context/CartContext";
 
 const boblic = localFont({
   src: "../../public/fonts/BoblicRegular.woff",
@@ -26,7 +27,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru" className={`${boblic.variable} ${scriptbl.variable}`}>
-      <body>{children}</body>
+      <body>
+        <CartProvider>{children}</CartProvider>
+      </body>
     </html>
   );
 }

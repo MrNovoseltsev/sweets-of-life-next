@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CartButton from "@/components/cart/CartButton";
 
 const navLinks = [
   { href: "/catalog", label: "КАТАЛОГ" },
@@ -14,13 +15,8 @@ export default function Header() {
         <Link href="/">Sweets Of Life</Link>
       </h1>
 
-      <div className="flex flex-col items-center w-[230px] mr-2.5">
-        <p className="pt-5">ПИШИТЕ НАМ:</p>
-        <p className="pt-1.5">
-          <a href="mailto:info@sweetsoflife.ru" className="hover:font-bold">
-            info@sweetsoflife.ru
-          </a>
-        </p>
+      <div className="flex items-center justify-center w-[230px] mr-2.5">
+        <CartButton />
       </div>
 
       <nav className="flex items-center w-[980px] h-[35px] ml-2.5 bg-brand-light border border-brand rounded-full self-end">

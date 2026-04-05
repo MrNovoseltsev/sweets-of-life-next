@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import PageWrapper from "@/components/layout/PageWrapper";
 import { getAllProducts, getProductBySku } from "@/lib/mock/products";
+import BuyButton from "@/components/ui/BuyButton";
 
 export async function generateStaticParams() {
   const products = await getAllProducts();
@@ -48,6 +49,8 @@ export default async function ProductPage({ params }: Props) {
 
           <div className="flex flex-col gap-4">
             <p className="text-xl">{product.price} ₽</p>
+
+            <BuyButton product={product} />
 
             <p className="text-base leading-relaxed">{product.description}</p>
 

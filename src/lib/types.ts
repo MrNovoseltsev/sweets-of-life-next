@@ -25,6 +25,25 @@ export interface Product {
   };
 }
 
+export interface CartItem {
+  sku: string;
+  name: string;
+  price: number;   // RUB snapshot
+  image: string;   // preview URL snapshot
+  quantity: number;
+}
+
+export interface CartState {
+  items: CartItem[];
+}
+
+export type CartAction =
+  | { type: 'ADD_ITEM';    payload: CartItem }
+  | { type: 'REMOVE_ITEM'; payload: { sku: string } }
+  | { type: 'UPDATE_QTY';  payload: { sku: string; quantity: number } }
+  | { type: 'CLEAR_CART' }
+  | { type: 'INITIALIZE';  payload: CartItem[] };
+
 export interface NewsPost {
   id: string;            // NS-0061
   date: string;          // "23 июля 2015"
