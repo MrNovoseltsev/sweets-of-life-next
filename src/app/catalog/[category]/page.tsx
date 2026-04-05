@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import PageWrapper from "@/components/layout/PageWrapper";
+import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { CATEGORY_META, CATEGORY_SLUGS } from "@/lib/constants";
 import { getProductsByCategory } from "@/lib/mock/products";
 import type { CategorySlug } from "@/lib/types";
@@ -25,6 +26,12 @@ export default async function CategoryPage({ params }: Props) {
   return (
     <PageWrapper>
       <section className="px-2.5 py-4">
+        <Breadcrumbs
+          items={[
+            { label: "Каталог", href: "/" },
+            { label: meta.label },
+          ]}
+        />
         <h1 className="text-2xl font-normal mb-1">{meta.label.toUpperCase()}</h1>
         <div className="w-[980px] h-px bg-brand ml-2.5 mb-4" />
 

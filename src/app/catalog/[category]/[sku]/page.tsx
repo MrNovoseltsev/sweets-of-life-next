@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import PageWrapper from "@/components/layout/PageWrapper";
+import Breadcrumbs from "@/components/ui/Breadcrumbs";
+import { CATEGORY_META } from "@/lib/constants";
 import { getAllProducts, getProductBySku } from "@/lib/mock/products";
 import BuyButton from "@/components/ui/BuyButton";
 
@@ -20,10 +22,12 @@ const LABELS: Record<string, string> = {
 };
 
 export default async function ProductPage({ params }: Props) {
-  const { sku } = await params;
+  const { category, sku } = await params;
   const product = await getProductBySku(sku);
 
   if (!product) notFound();
+
+  const categoryLabel = CATEGORY_META.find((c) => c.slug === category)?.label ?? category;
 
   const characteristics = (["type", "material", "decoration", "hardware", "size"] as const).filter(
     (key) => product[key as keyof typeof product]
@@ -32,6 +36,13 @@ export default async function ProductPage({ params }: Props) {
   return (
     <PageWrapper>
       <section className="px-5 py-4">
+        <Breadcrumbs
+          items={[
+            { label: "Каталог", href: "/" },
+            { label: categoryLabel, href: `/catalog/${category}` },
+            { label: product.name },
+          ]}
+        />
         <h1 className="text-2xl font-normal mb-1">{product.name}</h1>
         <div className="w-[980px] h-px bg-brand ml-0 mb-6" />
 
