@@ -33,7 +33,7 @@ export default function Footer() {
           <Link
             key={link.href}
             href={link.href}
-            className="flex-1 text-left pl-5 text-sm hover:font-bold"
+            className="flex-1 text-left pl-5 text-sm hover:text-[#fff44f]"
           >
             {link.label}
           </Link>
@@ -65,7 +65,7 @@ export default function Footer() {
       </div>
 
       <p className="mt-2.5 ml-7 text-sm">
-        &copy; 2015 интернет-магазин &laquo;Sweets Of Life&raquo;
+        &copy; 2026 интернет-магазин &laquo;Sweets Of Life&raquo;
       </p>
     </footer>
   );

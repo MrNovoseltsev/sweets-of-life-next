@@ -4,6 +4,10 @@ export type NewsPost = (typeof news)[number];
 
 const PER_PAGE = 10;
 
+export function getLatestNews(count: number): NewsPost[] {
+  return news.slice(0, count);
+}
+
 export async function getNewsPaginated(page: number): Promise<{
   posts: NewsPost[];
   total: number;

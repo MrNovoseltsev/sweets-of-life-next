@@ -28,7 +28,7 @@ export default async function CategoryPage({ params }: Props) {
       <section className="px-2.5 py-4">
         <Breadcrumbs
           items={[
-            { label: "Каталог", href: "/" },
+            { label: "Каталог", href: "/catalog" },
             { label: meta.label },
           ]}
         />

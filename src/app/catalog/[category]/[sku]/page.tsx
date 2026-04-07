@@ -38,7 +38,7 @@ export default async function ProductPage({ params }: Props) {
       <section className="px-5 py-4">
         <Breadcrumbs
           items={[
-            { label: "Каталог", href: "/" },
+            { label: "Каталог", href: "/catalog" },
             { label: categoryLabel, href: `/catalog/${category}` },
             { label: product.name },
           ]}
