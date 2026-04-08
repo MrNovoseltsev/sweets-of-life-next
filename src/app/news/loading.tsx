@@ -6,7 +6,7 @@ export default function NewsLoading() {
     <PageLayout>
       <section className="px-2.5 py-4">
         <Skeleton className="h-8 w-32 mb-2" />
-        <div className="w-[980px] h-px bg-brand/20 ml-0 mb-4" />
+        <div className="w-full h-px bg-brand/20 ml-0 mb-4" />
 
         <div className="flex flex-col gap-6 ml-2.5">
           {Array.from({ length: 5 }).map((_, i) => (

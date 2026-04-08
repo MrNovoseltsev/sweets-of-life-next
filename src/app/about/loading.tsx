@@ -6,7 +6,7 @@ export default function AboutLoading() {
     <PageLayout>
       <section className="px-5 py-4">
         <Skeleton className="h-8 w-48 mb-2" />
-        <div className="w-[980px] h-px bg-brand/20 mb-6" />
+        <div className="w-full h-px bg-brand/20 mb-6" />
 
         <div className="flex flex-col gap-4 max-w-[940px]">
           <div className="flex flex-col gap-2">

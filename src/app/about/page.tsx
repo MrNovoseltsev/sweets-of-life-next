@@ -5,7 +5,7 @@ export default function AboutPage() {
     <PageLayout>
       <section className="px-5 py-4">
         <h1 className="text-2xl font-normal mb-1">О МАГАЗИНЕ</h1>
-        <div className="w-[980px] h-px bg-brand mb-6" />
+        <div className="w-full h-px bg-brand mb-6" />
 
         <div className="flex flex-col gap-4 text-lg leading-relaxed max-w-[940px]">
           <p>

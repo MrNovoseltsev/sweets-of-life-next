@@ -32,13 +32,13 @@ export default async function CategoryPage({ params }: Props) {
             { label: meta.label },
           ]}
         />
-        <h1 className="text-2xl font-normal mb-1">{meta.label.toUpperCase()}</h1>
-        <div className="w-[980px] h-px bg-brand ml-2.5 mb-4" />
+        <h1 className="hidden desktop:block text-2xl font-normal mb-1">{meta.label.toUpperCase()}</h1>
+        <div className="w-full h-px bg-brand mb-4" />
 
         {products.length === 0 ? (
           <p className="ml-2.5 text-lg">Товары не найдены.</p>
         ) : (
-          <div className="flex flex-wrap gap-4 ml-2.5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 desktop:grid-cols-4 gap-3 md:gap-4">
             {products.map((product) => (
               <ProductCard
                 key={product.sku}

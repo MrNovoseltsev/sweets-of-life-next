@@ -6,7 +6,7 @@ export default function ProductLoading() {
     <PageLayout>
       <section className="px-5 py-4">
         <Skeleton className="h-8 w-80 mb-2" />
-        <div className="w-[980px] h-px bg-brand/20 mb-6" />
+        <div className="w-full h-px bg-brand/20 mb-6" />
 
         <div className="flex gap-8">
           <Skeleton className="w-[400px] h-[400px] shrink-0 rounded-xl border border-brand/20" />

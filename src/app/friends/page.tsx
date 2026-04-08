@@ -29,7 +29,7 @@ export default function FriendsPage() {
     <PageLayout>
       <section className="px-5 py-4">
         <h1 className="text-2xl font-normal mb-1">НАШИ ДРУЗЬЯ</h1>
-        <div className="w-[980px] h-px bg-brand mb-4" />
+        <div className="w-full h-px bg-brand mb-4" />
 
         <p className="text-lg italic mb-6 max-w-[940px]">
           Скажи мне, кто твой друг, и я скажу тебе, кто ты!

@@ -4,7 +4,7 @@ type BreadcrumbItem = { label: string; href?: string };
 
 export default function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
   return (
-    <nav className="flex items-center gap-1.5 text-sm text-brand/60 mb-1">
+    <nav className="flex items-center gap-1.5 text-2xl desktop:text-sm text-brand/60 mb-1">
       {items.map((item, i) => (
         <span key={i} className="flex items-center gap-1.5">
           {i > 0 && <span>—</span>}

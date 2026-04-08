@@ -14,7 +14,7 @@ export default async function NewsPage({ searchParams }: Props) {
     <PageLayout>
       <section className="px-2.5 py-4">
         <h1 className="text-2xl font-normal mb-1">НОВОСТИ</h1>
-        <div className="w-[980px] h-px bg-brand ml-0 mb-4" />
+        <div className="w-full h-px bg-brand ml-0 mb-4" />
 
         <div className="flex flex-col gap-6 ml-2.5">
           {posts.map((post) => {

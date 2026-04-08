@@ -56,13 +56,13 @@ export default function OrderPage() {
     <PageLayout>
       <section className="px-5 py-4">
         <h1 className="text-2xl font-normal mb-1">ЗАКАЗАТЬ</h1>
-        <div className="w-[980px] h-px bg-brand mb-6" />
+        <div className="w-full h-px bg-brand mb-6" />
 
         <div className="flex flex-col gap-8 text-lg leading-relaxed max-w-[940px]">
           {sections.map((s) => (
             <div key={s.id} id={s.id} className="flex flex-col gap-3">
               <h2 className="text-xl font-normal">{s.title}</h2>
-              <div className="w-[940px] h-px bg-brand/30" />
+              <div className="w-full h-px bg-brand/30" />
               {s.content}
             </div>
           ))}

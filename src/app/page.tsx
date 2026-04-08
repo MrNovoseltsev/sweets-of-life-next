@@ -15,7 +15,7 @@ export default async function Page() {
             <Link href="/catalog" className="hover:text-brand-light transition-colors">КАТАЛОГ</Link>
           </h2>
         </div>
-        <div className="w-[980px] h-px bg-brand ml-0 mb-4" />
+        <div className="w-full h-px bg-brand ml-0 mb-4" />
         <CatalogGrid />
       </section>
 
@@ -28,7 +28,7 @@ export default async function Page() {
             Все новости →
           </Link>
         </div>
-        <div className="w-[980px] h-px bg-brand ml-0 mb-4" />
+        <div className="w-full h-px bg-brand ml-0 mb-4" />
 
         <div className="flex flex-col gap-4 ml-2.5">
           {latestNews.map((post) => {

@@ -28,21 +28,21 @@ const footerColumns = [
 export default function Footer() {
   return (
     <footer className="mt-5">
-      <nav className="flex items-center w-[980px] h-[35px] ml-2.5 bg-brand-light border border-brand rounded-full">
+      <nav className="flex flex-col md:flex-row md:items-center md:h-[35px] mx-2.5 bg-brand-light border border-brand rounded-[20px] md:rounded-full py-2 md:py-0">
         {footerNav.map((link) => (
           <Link
             key={link.href}
             href={link.href}
-            className="flex-1 text-left pl-5 text-sm hover:text-[#fff44f]"
+            className="md:flex-1 text-center md:text-left text-2xl desktop:text-sm hover:text-[#fff44f] py-1 md:py-0 md:pl-5 md:truncate"
           >
             {link.label}
           </Link>
         ))}
       </nav>
 
-      <div className="flex mt-2.5 ml-7">
+      <div className="hidden md:flex w-full mt-2.5 mx-2.5">
         {footerColumns.map((column, i) => (
-          <div key={i} className="w-[210px] mr-10">
+          <div key={i} className="flex-1 pl-5">
             {column.map((link) => (
               <Link
                 key={`${link.href}-${link.label}`}
@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
         ))}
 
-        <div className="w-[210px]">
+        <div className="flex-1 pl-5">
           <a
             href="https://vk.com/sweetsoflifehandmade"
             className="inline-block w-8 h-8 rounded-full bg-[#5f7d9d] hover:shadow-[0_0_10px_0_#5f7d9d]"

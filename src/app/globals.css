@@ -23,6 +23,7 @@
   --font-script: "SCRIPTBL", cursive;
   --color-brand: #1e5945;
   --color-brand-light: #40d39d;
+  --breakpoint-desktop: 75rem;
 }
 
 body {
