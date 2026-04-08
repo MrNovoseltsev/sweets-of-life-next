@@ -1,11 +1,11 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
-import Link from "next/link";
 import PageLayout from "@/widgets/page-layout/ui/PageLayout";
 import Breadcrumbs from "@/shared/ui/Breadcrumbs";
 import { CATEGORY_META, CATEGORY_SLUGS } from "@/shared/config/categories";
 import { getProductsByCategory } from "@/entities/product/api";
 import type { CategorySlug } from "@/entities/product/model/types";
+import ProductCard from "@/entities/product/ui/ProductCard";
+import BuyButton from "@/features/cart/ui/BuyButton";
 
 export function generateStaticParams() {
   return CATEGORY_SLUGS.map((category) => ({ category }));
@@ -40,25 +40,12 @@ export default async function CategoryPage({ params }: Props) {
         ) : (
           <div className="flex flex-wrap gap-4 ml-2.5">
             {products.map((product) => (
-              <Link
+              <ProductCard
                 key={product.sku}
+                product={product}
                 href={`/catalog/${category}/${product.sku}`}
-                className="group w-[220px] border border-brand rounded-xl overflow-hidden hover:shadow-[0_0_10px_0_var(--color-brand)] transition-shadow"
-              >
-                <div className="relative w-full h-[180px] bg-brand-light">
-                  <Image
-                    src={product.image.preview}
-                    alt={product.name}
-                    fill
-                    className="object-cover"
-                    sizes="220px"
-                  />
-                </div>
-                <div className="p-2">
-                  <p className="text-base leading-tight">{product.name}</p>
-                  <p className="text-sm mt-1">{product.price} ₽</p>
-                </div>
-              </Link>
+                action={<BuyButton product={product} size="sm" />}
+              />
             ))}
           </div>
         )}
