@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import {
   getAllProducts,
   getProductsByCategory,
-} from "@/lib/mock/products";
+} from "@/entities/product/api";
 
 const VALID_CATEGORIES = [
   "bracelets",

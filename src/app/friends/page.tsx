@@ -1,4 +1,4 @@
-import PageWrapper from "@/components/layout/PageWrapper";
+import PageLayout from "@/widgets/page-layout/ui/PageLayout";
 
 const friends = [
   {
@@ -26,7 +26,7 @@ const friends = [
 
 export default function FriendsPage() {
   return (
-    <PageWrapper>
+    <PageLayout>
       <section className="px-5 py-4">
         <h1 className="text-2xl font-normal mb-1">НАШИ ДРУЗЬЯ</h1>
         <div className="w-[980px] h-px bg-brand mb-4" />
@@ -55,6 +55,6 @@ export default function FriendsPage() {
           ))}
         </div>
       </section>
-    </PageWrapper>
+    </PageLayout>
   );
 }

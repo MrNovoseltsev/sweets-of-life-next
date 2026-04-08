@@ -1,12 +1,12 @@
-import PageWrapper from "@/components/layout/PageWrapper";
-import CatalogGrid from "@/components/CatalogGrid";
+import PageLayout from "@/widgets/page-layout/ui/PageLayout";
+import CatalogGrid from "@/widgets/catalog-grid/ui/CatalogGrid";
 
 export default function CatalogPage() {
   return (
-    <PageWrapper>
+    <PageLayout>
       <section className="p-2.5">
         <CatalogGrid />
       </section>
-    </PageWrapper>
+    </PageLayout>
   );
 }

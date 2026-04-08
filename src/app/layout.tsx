@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { CartProvider } from "@/context/CartContext";
+import { CartProvider } from "@/features/cart/model/CartContext";
 
 const boblic = localFont({
   src: "../../public/fonts/BoblicRegular.woff",

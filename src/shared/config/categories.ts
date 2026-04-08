@@ -1,4 +1,4 @@
-import type { CategorySlug } from "@/lib/types";
+import type { CategorySlug } from "@/entities/product/model/types";
 
 interface CategoryMeta {
   slug: CategorySlug;

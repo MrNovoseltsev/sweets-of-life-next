@@ -1,11 +1,11 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import PageWrapper from "@/components/layout/PageWrapper";
-import Breadcrumbs from "@/components/ui/Breadcrumbs";
-import { CATEGORY_META, CATEGORY_SLUGS } from "@/lib/constants";
-import { getProductsByCategory } from "@/lib/mock/products";
-import type { CategorySlug } from "@/lib/types";
+import PageLayout from "@/widgets/page-layout/ui/PageLayout";
+import Breadcrumbs from "@/shared/ui/Breadcrumbs";
+import { CATEGORY_META, CATEGORY_SLUGS } from "@/shared/config/categories";
+import { getProductsByCategory } from "@/entities/product/api";
+import type { CategorySlug } from "@/entities/product/model/types";
 
 export function generateStaticParams() {
   return CATEGORY_SLUGS.map((category) => ({ category }));
@@ -24,7 +24,7 @@ export default async function CategoryPage({ params }: Props) {
   const products = await getProductsByCategory(category);
 
   return (
-    <PageWrapper>
+    <PageLayout>
       <section className="px-2.5 py-4">
         <Breadcrumbs
           items={[
@@ -63,6 +63,6 @@ export default async function CategoryPage({ params }: Props) {
           </div>
         )}
       </section>
-    </PageWrapper>
+    </PageLayout>
   );
 }

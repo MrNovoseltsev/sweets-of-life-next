@@ -1,8 +1,7 @@
 'use client';
 
-
-import { useCart } from '@/context/CartContext';
-import type { Product } from '@/lib/types';
+import { useCart } from '../model/CartContext';
+import type { Product } from '@/entities/product/model/types';
 
 type Props = {
   product: Pick<Product, 'sku' | 'name' | 'price' | 'image'>;

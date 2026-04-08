@@ -1,5 +1,5 @@
 import Link from "next/link";
-import CartButton from "@/components/cart/CartButton";
+import CartButton from "@/features/cart/ui/CartButton";
 
 const navLinks = [
   { href: "/catalog", label: "КАТАЛОГ" },

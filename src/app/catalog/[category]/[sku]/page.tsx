@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import PageWrapper from "@/components/layout/PageWrapper";
-import Breadcrumbs from "@/components/ui/Breadcrumbs";
-import { CATEGORY_META } from "@/lib/constants";
-import { getAllProducts, getProductBySku } from "@/lib/mock/products";
-import BuyButton from "@/components/ui/BuyButton";
+import PageLayout from "@/widgets/page-layout/ui/PageLayout";
+import Breadcrumbs from "@/shared/ui/Breadcrumbs";
+import { CATEGORY_META } from "@/shared/config/categories";
+import { getAllProducts, getProductBySku } from "@/entities/product/api";
+import BuyButton from "@/features/cart/ui/BuyButton";
 
 export async function generateStaticParams() {
   const products = await getAllProducts();
@@ -34,7 +34,7 @@ export default async function ProductPage({ params }: Props) {
   );
 
   return (
-    <PageWrapper>
+    <PageLayout>
       <section className="px-5 py-4">
         <Breadcrumbs
           items={[
@@ -78,6 +78,6 @@ export default async function ProductPage({ params }: Props) {
           </div>
         </div>
       </section>
-    </PageWrapper>
+    </PageLayout>
   );
 }

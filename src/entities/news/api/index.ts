@@ -1,6 +1,7 @@
-import news from "@/data/news.json";
+import newsJson from "@/data/news.json";
+import type { NewsPost } from "../model/types";
 
-export type NewsPost = (typeof news)[number];
+const news = newsJson as NewsPost[];
 
 const PER_PAGE = 10;
 

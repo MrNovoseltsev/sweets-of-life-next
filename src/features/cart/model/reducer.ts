@@ -1,4 +1,4 @@
-import type { CartAction, CartState } from '@/lib/types';
+import type { CartAction, CartState } from './types';
 
 export function cartReducer(state: CartState, action: CartAction): CartState {
   switch (action.type) {

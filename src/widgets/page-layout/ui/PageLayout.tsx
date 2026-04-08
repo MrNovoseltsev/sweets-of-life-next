@@ -1,7 +1,7 @@
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "@/widgets/header/ui/Header";
+import Footer from "@/widgets/footer/ui/Footer";
 
-export default function PageWrapper({ children }: { children: React.ReactNode }) {
+export default function PageLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="mx-auto w-[1000px] min-h-screen border-x border-brand bg-pattern-inner">
       <Header />

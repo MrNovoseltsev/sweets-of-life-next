@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useCart } from '@/context/CartContext';
+import { useCart } from '../model/CartContext';
 import CartItemRow from './CartItem';
 
 type Props = {

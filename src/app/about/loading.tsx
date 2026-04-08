@@ -1,9 +1,9 @@
-import PageWrapper from "@/components/layout/PageWrapper";
-import { Skeleton } from "@/components/ui/skeleton";
+import PageLayout from "@/widgets/page-layout/ui/PageLayout";
+import { Skeleton } from "@/shared/ui/Skeleton";
 
 export default function AboutLoading() {
   return (
-    <PageWrapper>
+    <PageLayout>
       <section className="px-5 py-4">
         <Skeleton className="h-8 w-48 mb-2" />
         <div className="w-[980px] h-px bg-brand/20 mb-6" />
@@ -22,6 +22,6 @@ export default function AboutLoading() {
           </div>
         </div>
       </section>
-    </PageWrapper>
+    </PageLayout>
   );
 }

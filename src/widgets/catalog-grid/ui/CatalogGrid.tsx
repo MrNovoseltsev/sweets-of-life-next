@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CATEGORY_META } from "@/lib/constants";
+import { CATEGORY_META } from "@/shared/config/categories";
 
 export default function CatalogGrid() {
   return (

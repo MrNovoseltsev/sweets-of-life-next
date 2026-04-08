@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getProductBySku } from "@/lib/mock/products";
+import { getProductBySku } from "@/entities/product/api";
 
 export async function GET(
   _request: Request,

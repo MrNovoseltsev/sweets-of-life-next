@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useCart } from '@/context/CartContext';
+import { useCart } from '../model/CartContext';
 import CartDrawer from './CartDrawer';
 
 export default function CartButton() {

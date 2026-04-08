@@ -1,8 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import { useCart } from '@/context/CartContext';
-import type { CartItem } from '@/lib/types';
+import { useCart } from '../model/CartContext';
+import type { CartItem } from '../model/types';
 
 type Props = { item: CartItem };
 

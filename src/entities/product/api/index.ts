@@ -1,6 +1,7 @@
-import products from "@/data/products.json";
+import productsJson from "@/data/products.json";
+import type { Product } from "../model/types";
 
-export type Product = (typeof products)[number];
+const products = productsJson as Product[];
 
 export async function getAllProducts(): Promise<Product[]> {
   return products;

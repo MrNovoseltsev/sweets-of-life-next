@@ -1,9 +1,9 @@
 'use client';
 
 import { createContext, useContext, useEffect, useReducer, useState } from 'react';
-import type { CartAction, CartState } from '@/lib/types';
-import { cartReducer } from '@/lib/cart/reducer';
-import { loadCart, saveCart } from '@/lib/cart/storage';
+import type { CartAction, CartState } from './types';
+import { cartReducer } from './reducer';
+import { loadCart, saveCart } from './storage';
 
 interface CartContextValue {
   state: CartState;

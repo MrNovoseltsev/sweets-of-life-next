@@ -1,4 +1,4 @@
-import type { CartItem } from '@/lib/types';
+import type { CartItem } from './types';
 
 const CART_KEY = 'sweetsoflife_cart';
 

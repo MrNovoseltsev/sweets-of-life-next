@@ -1,4 +1,4 @@
-import PageWrapper from "@/components/layout/PageWrapper";
+import PageLayout from "@/widgets/page-layout/ui/PageLayout";
 
 const sections = [
   {
@@ -53,7 +53,7 @@ const sections = [
 
 export default function OrderPage() {
   return (
-    <PageWrapper>
+    <PageLayout>
       <section className="px-5 py-4">
         <h1 className="text-2xl font-normal mb-1">ЗАКАЗАТЬ</h1>
         <div className="w-[980px] h-px bg-brand mb-6" />
@@ -68,6 +68,6 @@ export default function OrderPage() {
           ))}
         </div>
       </section>
-    </PageWrapper>
+    </PageLayout>
   );
 }

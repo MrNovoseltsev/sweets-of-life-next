@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import PageWrapper from "@/components/layout/PageWrapper";
-import { getNewsPaginated } from "@/lib/mock/news";
+import PageLayout from "@/widgets/page-layout/ui/PageLayout";
+import { getNewsPaginated } from "@/entities/news/api";
 
 type Props = { searchParams: Promise<{ page?: string }> };
 
@@ -11,7 +11,7 @@ export default async function NewsPage({ searchParams }: Props) {
   const { posts, totalPages } = await getNewsPaginated(page);
 
   return (
-    <PageWrapper>
+    <PageLayout>
       <section className="px-2.5 py-4">
         <h1 className="text-2xl font-normal mb-1">НОВОСТИ</h1>
         <div className="w-[980px] h-px bg-brand ml-0 mb-4" />
@@ -71,6 +71,6 @@ export default async function NewsPage({ searchParams }: Props) {
           </nav>
         )}
       </section>
-    </PageWrapper>
+    </PageLayout>
   );
 }
