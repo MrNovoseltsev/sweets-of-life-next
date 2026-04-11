@@ -33,7 +33,7 @@ export async function GET(request: NextRequest) {
   }
 
   const all = category
-    ? await getProductsByCategory(category)
+    ? await getProductsByCategory(category as Parameters<typeof getProductsByCategory>[0])
     : await getAllProducts();
 
   const total = all.length;

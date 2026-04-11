@@ -19,7 +19,7 @@ export default async function CategoryPage({ params }: Props) {
   }
 
   const meta = CATEGORY_META.find((c) => c.slug === category)!;
-  const products = await getProductsByCategory(category);
+  const products = await getProductsByCategory(category as CategorySlug);
 
   return (
     <PageLayout>

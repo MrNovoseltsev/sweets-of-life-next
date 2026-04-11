@@ -1,12 +1,36 @@
-import newsJson from "@/data/news.json";
+import { createAnonSupabaseClient } from "@/shared/lib/supabase";
 import type { NewsPost } from "../model/types";
-
-const news = newsJson as NewsPost[];
 
 const PER_PAGE = 10;
 
-export function getLatestNews(count: number): NewsPost[] {
-  return news.slice(0, count);
+type NewsRow = {
+  slug: string;
+  published_date: string;
+  title: string;
+  excerpt: string;
+  image: string;
+  url: string | null;
+};
+
+function mapRow(row: NewsRow): NewsPost {
+  return {
+    id: row.slug,
+    date: row.published_date,
+    title: row.title,
+    excerpt: row.excerpt,
+    image: row.image,
+    url: row.url,
+  };
+}
+
+export async function getLatestNews(count: number): Promise<NewsPost[]> {
+  const supabase = createAnonSupabaseClient();
+  const { data } = await supabase
+    .from("news")
+    .select("slug, published_date, title, excerpt, image, url")
+    .order("published_date", { ascending: false })
+    .limit(count);
+  return (data ?? []).map(mapRow);
 }
 
 export async function getNewsPaginated(page: number): Promise<{
@@ -15,9 +39,21 @@ export async function getNewsPaginated(page: number): Promise<{
   totalPages: number;
   page: number;
 }> {
-  const total = news.length;
+  const supabase = createAnonSupabaseClient();
+
+  const { count } = await supabase
+    .from("news")
+    .select("*", { count: "exact", head: true });
+
+  const total = count ?? 0;
   const totalPages = Math.ceil(total / PER_PAGE);
-  const clamped = Math.min(Math.max(1, page), totalPages);
-  const posts = news.slice((clamped - 1) * PER_PAGE, clamped * PER_PAGE);
-  return { posts, total, totalPages, page: clamped };
+  const clamped = Math.min(Math.max(1, page), totalPages || 1);
+
+  const { data } = await supabase
+    .from("news")
+    .select("slug, published_date, title, excerpt, image, url")
+    .order("published_date", { ascending: false })
+    .range((clamped - 1) * PER_PAGE, clamped * PER_PAGE - 1);
+
+  return { posts: (data ?? []).map(mapRow), total, totalPages, page: clamped };
 }

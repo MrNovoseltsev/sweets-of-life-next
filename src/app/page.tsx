@@ -5,7 +5,7 @@ import CatalogGrid from "@/widgets/catalog-grid/ui/CatalogGrid";
 import { getLatestNews } from "@/entities/news/api";
 
 export default async function Page() {
-  const latestNews = getLatestNews(5);
+  const latestNews = await getLatestNews(5);
 
   return (
     <PageLayout>
