@@ -1,7 +1,8 @@
 'use client';
 
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useCart } from '../model/CartContext';
+import { useAuth } from '@/features/auth/model/AuthContext';
 import CartItemRow from './CartItem';
 
 type Props = {
@@ -11,6 +12,17 @@ type Props = {
 
 export default function CartDrawer({ open, onClose }: Props) {
   const { state, dispatch } = useCart();
+  const { user, openAuthModal } = useAuth();
+  const router = useRouter();
+
+  function handleCheckout() {
+    if (!user) {
+      openAuthModal();
+    } else {
+      onClose();
+      router.push('/order');
+    }
+  }
 
   const totalPrice = state.items.reduce((n, i) => n + i.price * i.quantity, 0);
   const totalCount = state.items.reduce((n, i) => n + i.quantity, 0);
@@ -61,13 +73,12 @@ export default function CartDrawer({ open, onClose }: Props) {
               <span>Итого ({totalCount} шт.):</span>
               <span>{totalPrice} ₽</span>
             </div>
-            <Link
-              href="/order"
-              onClick={onClose}
-              className="block text-center bg-[#1e5945] text-white py-5 md:py-2.5 text-[28px] md:text-base rounded-lg hover:bg-[#164030] transition-colors"
+            <button
+              onClick={handleCheckout}
+              className="block w-full text-center bg-[#1e5945] text-white py-5 md:py-2.5 text-[28px] md:text-base rounded-lg hover:bg-[#164030] transition-colors cursor-pointer"
             >
               Оформить заказ
-            </Link>
+            </button>
             <button
               onClick={() => dispatch({ type: 'CLEAR_CART' })}
               className="text-[28px] md:text-sm text-brand/50 hover:text-brand cursor-pointer"

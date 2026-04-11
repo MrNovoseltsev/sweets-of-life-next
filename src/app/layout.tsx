@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { CartProvider } from "@/features/cart/model/CartContext";
+import { AuthProvider } from "@/features/auth/model/AuthContext";
+import { createServerSupabaseClient } from "@/shared/lib/supabase";
 
 const boblic = localFont({
   src: "../../public/fonts/BoblicRegular.woff",
@@ -20,15 +22,20 @@ export const metadata: Metadata = {
   description: "Авторские украшения ручной работы",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const supabase = await createServerSupabaseClient();
+  const { data: { user } } = await supabase.auth.getUser();
+
   return (
     <html lang="ru" className={`${boblic.variable} ${scriptbl.variable}`}>
       <body>
-        <CartProvider>{children}</CartProvider>
+        <AuthProvider initialUser={user}>
+          <CartProvider>{children}</CartProvider>
+        </AuthProvider>
       </body>
     </html>
   );

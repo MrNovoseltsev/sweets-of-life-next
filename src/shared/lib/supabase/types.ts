@@ -157,15 +157,18 @@ export type Database = {
         Row: {
           id: string;
           role: string;
+          name: string | null;
           created_at: string;
         };
         Insert: {
           id: string;
           role?: string;
+          name?: string | null;
           created_at?: string;
         };
         Update: {
           role?: string;
+          name?: string | null;
         };
         Relationships: [];
       };

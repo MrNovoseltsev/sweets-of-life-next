@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CartButton from "@/features/cart/ui/CartButton";
+import AuthButton from "@/features/auth/ui/AuthButton";
 import HeaderNav from "./HeaderNav";
 
 export default function Header() {
@@ -9,7 +10,8 @@ export default function Header() {
         <Link href="/">Sweets Of Life</Link>
       </h1>
 
-      <div className="flex items-center md:justify-center md:w-[230px] mr-2.5 shrink-0">
+      <div className="flex items-center gap-3 md:justify-center md:w-[230px] mr-2.5 shrink-0">
+        <AuthButton />
         <CartButton />
       </div>
 
