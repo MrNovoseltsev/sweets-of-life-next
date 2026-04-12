@@ -42,6 +42,7 @@ jobs:
         run: npm run build
         env:
           NEXT_PUBLIC_USE_MOCK: "true"
+          NEXT_PUBLIC_BASE_PATH: "/sweets-of-life-next"
           NEXT_PUBLIC_SUPABASE_URL: "https://placeholder.supabase.co"
           NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: "placeholder"
 

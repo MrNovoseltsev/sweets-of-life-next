@@ -34,9 +34,11 @@ export default async function RootLayout({
     user = data.user;
   }
 
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
   return (
     <html lang="ru" className={`${boblic.variable} ${scriptbl.variable}`}>
-      <body>
+      <body style={{ backgroundImage: `url(${basePath}/images/patterns/bg-outer.png)` }}>
         <AuthProvider initialUser={user}>
           <CartProvider>{children}</CartProvider>
         </AuthProvider>

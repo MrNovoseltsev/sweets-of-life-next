@@ -29,15 +29,4 @@
 body {
   font-family: var(--font-boblic);
   color: var(--color-brand);
-  background-image: url("/images/patterns/bg-outer.png");
-}
-
-/* Background pattern utilities */
-.bg-pattern-outer {
-  background-image: url("/images/patterns/bg-outer.png");
-}
-
-.bg-pattern-inner {
-  background-image: url("/images/patterns/bg-inner.png");
-  background-repeat: repeat;
 }
