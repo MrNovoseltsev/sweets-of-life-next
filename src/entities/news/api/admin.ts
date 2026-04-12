@@ -5,7 +5,10 @@ type NewsRow = Database['public']['Tables']['news']['Row'];
 type NewsInsert = Database['public']['Tables']['news']['Insert'];
 type NewsUpdate = Database['public']['Tables']['news']['Update'];
 
+const USE_MOCK = process.env.NEXT_PUBLIC_USE_MOCK === 'true';
+
 export async function getAllNewsAdmin(): Promise<NewsRow[]> {
+  if (USE_MOCK) return [];
   const supabase = createAdminClient();
   const { data, error } = await supabase
     .from('news')

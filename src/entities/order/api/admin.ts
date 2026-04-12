@@ -1,7 +1,10 @@
 import { createAdminClient } from '@/shared/lib/supabase/admin';
 import type { OrderRow, OrderStatusDb } from '../model/types';
 
+const USE_MOCK = process.env.NEXT_PUBLIC_USE_MOCK === 'true';
+
 export async function getAllOrdersAdmin(): Promise<OrderRow[]> {
+  if (USE_MOCK) return [];
   const supabase = createAdminClient();
   const { data, error } = await supabase
     .from('orders')

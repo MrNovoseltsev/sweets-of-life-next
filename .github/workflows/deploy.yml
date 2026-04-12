@@ -36,6 +36,7 @@ jobs:
           cp src/features/admin-news-crud/actions.stub.ts src/features/admin-news-crud/actions.ts
           cp src/features/admin-users-crud/actions.stub.ts src/features/admin-users-crud/actions.ts
           cp src/features/admin-orders-crud/actions.stub.ts src/features/admin-orders-crud/actions.ts
+          cp src/app/auth/login/actions.stub.ts src/app/auth/login/actions.ts
 
       - name: Build static export
         run: npm run build

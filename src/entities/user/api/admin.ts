@@ -1,7 +1,10 @@
 import { createAdminClient } from '@/shared/lib/supabase/admin';
 import type { AdminUserRow } from '../model/types';
 
+const USE_MOCK = process.env.NEXT_PUBLIC_USE_MOCK === 'true';
+
 export async function getAllUsersAdmin(): Promise<AdminUserRow[]> {
+  if (USE_MOCK) return [];
   const supabase = createAdminClient();
 
   const { data: authData, error: authError } = await supabase.auth.admin.listUsers({
