@@ -71,7 +71,7 @@ export default function CartDrawer({ open, onClose }: Props) {
           <div className="px-8 py-8 md:px-4 md:py-4 border-t border-brand/20 flex flex-col gap-3">
             <div className="flex justify-between text-[32px] md:text-base font-medium">
               <span>Итого ({totalCount} шт.):</span>
-              <span>{totalPrice} ₽</span>
+              <span>{totalPrice.toLocaleString('ru-RU')} ₽</span>
             </div>
             <button
               onClick={handleCheckout}

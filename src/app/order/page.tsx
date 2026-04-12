@@ -1,71 +1,44 @@
 import PageLayout from "@/widgets/page-layout/ui/PageLayout";
-
-const sections = [
-  {
-    id: "order",
-    title: "КАК ЗАКАЗАТЬ",
-    content: (
-      <>
-        <p>
-          Для того чтобы сделать заказ, напишите нам на{" "}
-          <a href="mailto:info@sweetsoflife.ru" className="underline hover:font-bold">
-            info@sweetsoflife.ru
-          </a>
-          . Пожалуйста, укажите в письме:
-        </p>
-        <ul className="list-disc list-inside flex flex-col gap-1">
-          <li>ссылку или артикул понравившейся вещи;</li>
-          <li>адрес доставки (индекс, область, город, улица, дом) и ФИО.</li>
-        </ul>
-        <p>После получения заявки вещь бронируется не более чем на 3 дня.</p>
-      </>
-    ),
-  },
-  {
-    id: "payment",
-    title: "КАК ОПЛАТИТЬ",
-    content: (
-      <>
-        <ul className="list-disc list-inside flex flex-col gap-1">
-          <li>перевод на карту Сбербанка;</li>
-          <li>перевод на Яндекс.Кошелёк;</li>
-          <li>наличными при самовывозе.</li>
-        </ul>
-        <p className="font-bold">Оплату необходимо совершить в течение трёх дней после бронирования!</p>
-      </>
-    ),
-  },
-  {
-    id: "delivery",
-    title: "КАК ПОЛУЧИТЬ ЗАКАЗ",
-    content: (
-      <>
-        <p>Отправка происходит два раза в неделю. Обычный срок отправки — 1–2 рабочих дня.</p>
-        <ul className="list-disc list-inside flex flex-col gap-1">
-          <li>самовывоз — бесплатно (м. Бауманская);</li>
-          <li>ускоренная отправка Почтой России (1-й класс) — 200 рублей.</li>
-        </ul>
-        <p className="font-bold">При заказе свыше 2500 рублей доставка по России бесплатно!</p>
-      </>
-    ),
-  },
-];
+import OrderForm from "./OrderForm";
 
 export default function OrderPage() {
   return (
     <PageLayout>
       <section className="px-5 py-4">
-        <h1 className="text-2xl font-normal mb-1">ЗАКАЗАТЬ</h1>
+        <h1 className="text-2xl font-normal mb-1">ОФОРМИТЬ ЗАКАЗ</h1>
         <div className="w-full h-px bg-brand mb-6" />
 
-        <div className="flex flex-col gap-8 text-lg leading-relaxed max-w-[940px]">
-          {sections.map((s) => (
-            <div key={s.id} id={s.id} className="flex flex-col gap-3">
-              <h2 className="text-xl font-normal">{s.title}</h2>
-              <div className="w-full h-px bg-brand/30" />
-              {s.content}
+        <div className="flex flex-col gap-10 max-w-[600px]">
+          <OrderForm />
+
+          {/* Delivery info */}
+          <div className="flex flex-col gap-6 text-sm text-[#1e5945]/70 leading-relaxed">
+            <div>
+              <h2 className="text-base font-medium text-[#1e5945] mb-2">КАК ОПЛАТИТЬ</h2>
+              <div className="w-full h-px bg-brand/20 mb-3" />
+              <ul className="list-disc list-inside flex flex-col gap-1">
+                <li>перевод на карту Сбербанка;</li>
+                <li>перевод на Яндекс.Кошелёк;</li>
+                <li>наличными при самовывозе.</li>
+              </ul>
+              <p className="mt-2 font-medium text-[#1e5945]">
+                Оплату необходимо совершить в течение трёх дней после бронирования!
+              </p>
             </div>
-          ))}
+
+            <div>
+              <h2 className="text-base font-medium text-[#1e5945] mb-2">КАК ПОЛУЧИТЬ ЗАКАЗ</h2>
+              <div className="w-full h-px bg-brand/20 mb-3" />
+              <p>Отправка происходит два раза в неделю. Срок отправки — 1–2 рабочих дня.</p>
+              <ul className="list-disc list-inside flex flex-col gap-1 mt-2">
+                <li>самовывоз — бесплатно (м. Бауманская);</li>
+                <li>Почта России (1-й класс) — 200 рублей.</li>
+              </ul>
+              <p className="mt-2 font-medium text-[#1e5945]">
+                При заказе свыше 2500 рублей доставка по России бесплатно!
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </PageLayout>

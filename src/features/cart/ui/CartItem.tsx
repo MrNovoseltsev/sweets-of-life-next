@@ -25,14 +25,14 @@ export default function CartItemRow({ item }: Props) {
       {/* Text content */}
       <div className="flex flex-col flex-1 gap-1 min-w-0">
         <p className="text-[28px] md:text-sm leading-tight truncate">{item.name}</p>
-        <p className="text-[28px] md:text-sm text-brand/70">{item.price} ₽</p>
+        <p className="text-[28px] md:text-sm text-brand/70">{item.price.toLocaleString('ru-RU')} ₽</p>
 
         <div className="flex items-center justify-between mt-auto">
           <span className="text-[28px] md:text-sm">{item.quantity} шт.</span>
 
           {/* Total + delete — mobile only */}
           <div className="flex items-center gap-6 md:hidden">
-            <p className="text-[28px] md:text-sm font-medium">{item.price * item.quantity} ₽</p>
+            <p className="text-[28px] md:text-sm font-medium">{(item.price * item.quantity).toLocaleString('ru-RU')} ₽</p>
             <button
               onClick={() => dispatch({ type: 'REMOVE_ITEM', payload: { sku: item.sku } })}
               className="text-brand/40 hover:text-brand cursor-pointer text-[48px] md:text-lg leading-none"
@@ -53,7 +53,7 @@ export default function CartItemRow({ item }: Props) {
         >
           ×
         </button>
-        <p className="text-sm font-medium">{item.price * item.quantity} ₽</p>
+        <p className="text-sm font-medium">{(item.price * item.quantity).toLocaleString('ru-RU')} ₽</p>
       </div>
     </div>
   );

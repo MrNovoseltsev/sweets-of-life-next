@@ -14,6 +14,17 @@ export const usersColumns: ColumnDef<AdminUserRow>[] = [
   },
   { key: 'email', label: 'Email', readOnly: true, sortable: true, filterable: true, type: 'text' },
   {
+    key: 'name',
+    label: 'Имя',
+    readOnly: true,
+    sortable: true,
+    filterable: true,
+    type: 'text',
+    render: (v) => (
+      <span className="text-sm text-neutral-700">{v ? String(v) : <span className="text-neutral-400">—</span>}</span>
+    ),
+  },
+  {
     key: 'role',
     label: 'Роль',
     sortable: true,

@@ -26,7 +26,7 @@ export default function AuthButton() {
   }
 
   const displayName = user.user_metadata?.name as string | undefined;
-  const label = displayName ?? user.email ?? 'Аккаунт';
+  const label = displayName ?? 'Клиент';
 
   return (
     <div className="flex items-center gap-2">

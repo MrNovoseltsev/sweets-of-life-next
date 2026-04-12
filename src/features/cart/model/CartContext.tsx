@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useEffect, useReducer, useState } from 'react';
+import { createContext, useContext, useEffect, useReducer } from 'react';
 import type { CartAction, CartState } from './types';
 import { cartReducer } from './reducer';
 import { loadCart, saveCart } from './storage';
@@ -13,29 +13,24 @@ interface CartContextValue {
 
 const CartContext = createContext<CartContextValue | null>(null);
 
-const EMPTY_STATE: CartState = { items: [] };
+const EMPTY_STATE: CartState = { items: [], hydrated: false };
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [state, dispatch] = useReducer(cartReducer, EMPTY_STATE);
-  const [hydrated, setHydrated] = useState(false);
 
-  // Phase 1: load from localStorage on mount
+  // Phase 1: load from localStorage on mount — single dispatch sets items + hydrated
   useEffect(() => {
-    const stored = loadCart();
-    if (stored.length > 0) {
-      dispatch({ type: 'INITIALIZE', payload: stored });
-    }
-    setHydrated(true);
+    dispatch({ type: 'HYDRATE', payload: loadCart() });
   }, []);
 
   // Phase 2: persist every change after hydration
   useEffect(() => {
-    if (!hydrated) return;
+    if (!state.hydrated) return;
     saveCart(state.items);
-  }, [state.items, hydrated]);
+  }, [state.items, state.hydrated]);
 
   return (
-    <CartContext.Provider value={{ state, dispatch, hydrated }}>
+    <CartContext.Provider value={{ state, dispatch, hydrated: state.hydrated }}>
       {children}
     </CartContext.Provider>
   );

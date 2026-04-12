@@ -11,15 +11,16 @@ export async function getAllUsersAdmin(): Promise<AdminUserRow[]> {
 
   const { data: profiles, error: profilesError } = await supabase
     .from('profiles')
-    .select('id, role');
+    .select('id, role, name');
   if (profilesError) throw new Error(profilesError.message);
 
-  const roleMap = new Map((profiles ?? []).map((p) => [p.id, p.role]));
+  const profileMap = new Map((profiles ?? []).map((p) => [p.id, p]));
 
   return (authData.users ?? []).map((u) => ({
     id: u.id,
     email: u.email ?? '',
-    role: roleMap.get(u.id) ?? 'user',
+    name: profileMap.get(u.id)?.name ?? null,
+    role: profileMap.get(u.id)?.role ?? 'user',
     created_at: u.created_at,
   }));
 }

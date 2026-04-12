@@ -46,16 +46,31 @@ export async function customerSignUp(
   }
 
   const supabase = await createServerSupabaseClient();
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
   const { data, error } = await supabase.auth.signUp({
     email,
     password,
-    options: { data: { name } },
+    options: {
+      data: { name },
+      emailRedirectTo: `${siteUrl}/auth/callback`,
+    },
   });
 
   if (error) {
-    if (error.message.includes('already registered') || error.message.includes('already been registered')) {
+    if (error.code === 'over_email_send_rate_limit' || error.status === 429) {
+      return { error: 'Слишком много попыток. Подождите несколько минут и попробуйте снова', success: false };
+    }
+    if (
+      error.message.includes('already registered') ||
+      error.message.includes('already been registered') ||
+      error.code === 'email_exists'
+    ) {
       return { error: 'Этот email уже зарегистрирован', success: false };
     }
+    if (error.code === 'email_address_invalid') {
+      return { error: 'Некорректный email адрес', success: false };
+    }
+    console.error('[customerSignUp] unhandled error:', error.status, error.code, error.message);
     return { error: 'Ошибка регистрации. Попробуйте позже', success: false };
   }
 

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const sections = [
+  { slug: 'orders', label: 'Заказы' },
   { slug: 'news', label: 'Новости' },
   { slug: 'products', label: 'Продукты' },
   { slug: 'users', label: 'Пользователи' },

@@ -8,6 +8,7 @@ export interface CartItem {
 
 export interface CartState {
   items: CartItem[];
+  hydrated: boolean;
 }
 
 export type CartAction =
@@ -15,4 +16,4 @@ export type CartAction =
   | { type: 'REMOVE_ITEM'; payload: { sku: string } }
   | { type: 'UPDATE_QTY';  payload: { sku: string; quantity: number } }
   | { type: 'CLEAR_CART' }
-  | { type: 'INITIALIZE';  payload: CartItem[] };
+  | { type: 'HYDRATE';     payload: CartItem[] };
