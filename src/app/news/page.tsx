@@ -3,6 +3,8 @@ import Link from "next/link";
 import PageLayout from "@/widgets/page-layout/ui/PageLayout";
 import { getNewsPaginated } from "@/entities/news/api";
 
+export const dynamic = "force-static";
+
 type Props = { searchParams: Promise<{ page?: string }> };
 
 export default async function NewsPage({ searchParams }: Props) {

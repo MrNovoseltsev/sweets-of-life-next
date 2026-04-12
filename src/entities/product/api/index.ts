@@ -1,5 +1,8 @@
 import { createAnonSupabaseClient } from "@/shared/lib/supabase";
 import type { Product, CategorySlug } from "../model/types";
+import productsData from "@/data/products.json";
+
+const USE_MOCK = process.env.NEXT_PUBLIC_USE_MOCK === "true";
 
 type ProductRow = {
   sku: string;
@@ -36,12 +39,14 @@ const SELECT =
   "sku, category, name, price, type, material, decoration, hardware, size, description, image_full, image_preview";
 
 export async function getAllProducts(): Promise<Product[]> {
+  if (USE_MOCK) return productsData as Product[];
   const supabase = createAnonSupabaseClient();
   const { data } = await supabase.from("products").select(SELECT);
   return (data ?? []).map(mapRow);
 }
 
 export async function getProductBySku(sku: string): Promise<Product | undefined> {
+  if (USE_MOCK) return (productsData as Product[]).find((p) => p.sku === sku);
   const supabase = createAnonSupabaseClient();
   const { data } = await supabase
     .from("products")
@@ -52,6 +57,7 @@ export async function getProductBySku(sku: string): Promise<Product | undefined>
 }
 
 export async function getProductsByCategory(category: CategorySlug): Promise<Product[]> {
+  if (USE_MOCK) return (productsData as Product[]).filter((p) => p.category === category);
   const supabase = createAnonSupabaseClient();
   const { data } = await supabase
     .from("products")

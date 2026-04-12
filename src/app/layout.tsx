@@ -27,8 +27,12 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const supabase = await createServerSupabaseClient();
-  const { data: { user } } = await supabase.auth.getUser();
+  let user = null;
+  if (process.env.NEXT_PUBLIC_USE_MOCK !== 'true') {
+    const supabase = await createServerSupabaseClient();
+    const { data } = await supabase.auth.getUser();
+    user = data.user;
+  }
 
   return (
     <html lang="ru" className={`${boblic.variable} ${scriptbl.variable}`}>

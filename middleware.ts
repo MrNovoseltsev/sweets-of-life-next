@@ -3,6 +3,10 @@ import { NextRequest, NextResponse } from 'next/server';
 import type { Database } from '@/shared/lib/supabase/types';
 
 export async function middleware(request: NextRequest) {
+  if (process.env.NEXT_PUBLIC_USE_MOCK === "true") {
+    return NextResponse.next();
+  }
+
   let supabaseResponse = NextResponse.next({ request });
 
   const supabase = createServerClient<Database>(

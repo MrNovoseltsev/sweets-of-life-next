@@ -1,5 +1,8 @@
 import { createAnonSupabaseClient } from "@/shared/lib/supabase";
 import type { NewsPost } from "../model/types";
+import newsData from "@/data/news.json";
+
+const USE_MOCK = process.env.NEXT_PUBLIC_USE_MOCK === "true";
 
 const PER_PAGE = 10;
 
@@ -24,6 +27,7 @@ function mapRow(row: NewsRow): NewsPost {
 }
 
 export async function getLatestNews(count: number): Promise<NewsPost[]> {
+  if (USE_MOCK) return (newsData as NewsPost[]).slice(0, count);
   const supabase = createAnonSupabaseClient();
   const { data } = await supabase
     .from("news")
@@ -39,6 +43,10 @@ export async function getNewsPaginated(page: number): Promise<{
   totalPages: number;
   page: number;
 }> {
+  if (USE_MOCK) {
+    const posts = newsData as NewsPost[];
+    return { posts, total: posts.length, totalPages: 1, page: 1 };
+  }
   const supabase = createAnonSupabaseClient();
 
   const { count } = await supabase

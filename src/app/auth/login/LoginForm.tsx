@@ -1,20 +1,47 @@
 'use client';
 
-import { useActionState } from 'react';
-import { signIn, type LoginState } from './actions';
-
-const initialState: LoginState = { error: null };
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { createBrowserClient } from '@supabase/ssr';
 
 export default function LoginForm() {
-  const [state, action, pending] = useActionState(signIn, initialState);
+  const [error, setError] = useState<string | null>(null);
+  const [pending, setPending] = useState(false);
+  const router = useRouter();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const email = String(formData.get('email') ?? '');
+    const password = String(formData.get('password') ?? '');
+
+    if (!email || !password) {
+      setError('Email и пароль обязательны');
+      return;
+    }
+
+    setPending(true);
+    setError(null);
+
+    const supabase = createBrowserClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!,
+    );
+    const { error: authError } = await supabase.auth.signInWithPassword({ email, password });
+
+    if (authError) {
+      setError('Неверный email или пароль');
+      setPending(false);
+    } else {
+      router.push('/admin');
+    }
+  };
 
   return (
-    <form action={action} className="flex flex-col gap-4 w-full max-w-sm">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full max-w-sm">
       <h1 className="text-2xl font-normal tracking-wide">Вход</h1>
 
-      {state.error && (
-        <p className="text-red-600 text-sm">{state.error}</p>
-      )}
+      {error && <p className="text-red-600 text-sm">{error}</p>}
 
       <input
         name="email"

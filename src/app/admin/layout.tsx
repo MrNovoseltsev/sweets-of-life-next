@@ -1,19 +1,17 @@
-import { redirect } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import { createServerSupabaseClient } from '@/shared/lib/supabase';
 import { AdminSidebar } from '@/widgets/admin-sidebar/ui/AdminSidebar';
-
-async function signOut() {
-  'use server';
-  const supabase = await createServerSupabaseClient();
-  await supabase.auth.signOut();
-  redirect('/auth/login');
-}
+import { SignOutButton } from './_components/SignOutButton';
 
 export default async function AdminLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  if (process.env.NEXT_PUBLIC_USE_MOCK === 'true') {
+    notFound();
+  }
+
   const supabase = await createServerSupabaseClient();
   const {
     data: { user },
@@ -31,14 +29,7 @@ export default async function AdminLayout({
         </div>
         <AdminSidebar />
         <div className="mt-auto px-4 py-4 border-t border-neutral-100">
-          <form action={signOut}>
-            <button
-              type="submit"
-              className="text-xs text-neutral-400 underline hover:text-neutral-700"
-            >
-              Выйти
-            </button>
-          </form>
+          <SignOutButton />
         </div>
       </aside>
 
