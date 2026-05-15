@@ -21,15 +21,67 @@
 @theme {
   --font-boblic: "BoblicRegular", serif;
   --font-script: "SCRIPTBL", cursive;
+  --font-display: var(--font-cormorant), "Cormorant Garamond", serif;
+
   --color-brand: #1e5945;
+  --color-brand-mid: #2d7a5e;
   --color-brand-light: #40d39d;
+  --color-brand-pale: #e8f5f0;
+  --color-bg: #faf9f7;
+
+  --radius-card: 12px;
+  --radius-modal: 18px;
+
   --breakpoint-desktop: 75rem;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--font-boblic);
   color: var(--color-brand);
+  background-color: var(--color-bg);
   background-image: url("/images/patterns/bg-outer.png");
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-light);
+  border-radius: 3px;
+}
+
+/* Thin horizontal scrollbar for the news slider on the home page */
+.news-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-brand-light) transparent;
+}
+.news-scroll::-webkit-scrollbar {
+  height: 3px;
+}
+.news-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.news-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-brand-light);
+  border-radius: 2px;
+}
+
+.sol-container {
+  width: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: 28px;
+}
+@media (max-width: 768px) {
+  .sol-container {
+    padding-inline: 16px;
+  }
 }
 
 /* Background pattern utilities */

@@ -1,72 +1,79 @@
 import Link from "next/link";
+import VK from "@/shared/ui/icons/VK";
 
-const footerNav = [
-  { href: "/about", label: "Наш магазин" },
-  { href: "/order", label: "Покупателю" },
-  { href: "/friends", label: "Наши друзья" },
-  { href: "https://vk.com/sweetsoflifehandmade", label: "Мы в социальных сетях" },
-];
+type FooterLink = { href: string; label: string };
 
-const footerColumns = [
-  [
-    { href: "/about", label: "О магазине" },
-    { href: "/news", label: "Новости" },
-    { href: "/contacts", label: "Контакты" },
-  ],
-  [
-    { href: "/order", label: "Как сделать заказ" },
-    { href: "/order#payment", label: "Оплата" },
-    { href: "/order#delivery", label: "Доставка" },
-  ],
-  [
-    { href: "/friends", label: "Love's Avenue" },
-    { href: "/friends", label: "Wake Up Studio" },
-    { href: "/friends", label: "Ксения Михалева" },
-  ],
+const columns: { title: string; links: FooterLink[] }[] = [
+  {
+    title: "Магазин",
+    links: [
+      { href: "/about", label: "О магазине" },
+      { href: "/news", label: "Новости" },
+      { href: "/contacts", label: "Контакты" },
+    ],
+  },
+  {
+    title: "Покупателю",
+    links: [
+      { href: "/order", label: "Как сделать заказ" },
+      { href: "/order#payment", label: "Оплата" },
+      { href: "/order#delivery", label: "Доставка" },
+    ],
+  },
+  {
+    title: "Наши друзья",
+    links: [
+      { href: "/friends", label: "Love's Avenue" },
+      { href: "/friends", label: "Wake Up Studio" },
+      { href: "/friends", label: "Ксения Михалёва" },
+    ],
+  },
 ];
 
 export default function Footer() {
   return (
-    <footer className="mt-5">
-      <nav className="flex flex-col md:flex-row md:items-center md:h-[35px] mx-2.5 bg-brand-light border border-brand rounded-[20px] md:rounded-full py-2 md:py-0">
-        {footerNav.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className="md:flex-1 text-center md:text-left text-2xl desktop:text-sm hover:text-[#fff44f] py-1 md:py-0 md:pl-5 md:truncate"
-          >
-            {link.label}
-          </Link>
-        ))}
-      </nav>
+    <footer className="mt-auto border-t border-brand/10 bg-brand/[0.025]">
+      <div className="sol-container">
+        <div className="grid grid-cols-1 min-[481px]:grid-cols-2 md:grid-cols-4 gap-7 pt-9 pb-7">
+          {columns.map((col) => (
+            <div key={col.title}>
+              <p className="mb-3 text-[10px] tracking-[0.18em] uppercase text-brand/45">
+                {col.title}
+              </p>
+              {col.links.map((link) => (
+                <Link
+                  key={`${link.href}-${link.label}`}
+                  href={link.href}
+                  className="block py-[3px] text-[13px] text-brand opacity-70 transition-opacity hover:opacity-100"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          ))}
 
-      <div className="hidden md:flex w-full mt-2.5 mx-2.5">
-        {footerColumns.map((column, i) => (
-          <div key={i} className="flex-1 pl-5">
-            {column.map((link) => (
-              <Link
-                key={`${link.href}-${link.label}`}
-                href={link.href}
-                className="block text-sm hover:font-bold"
-              >
-                {link.label}
-              </Link>
-            ))}
+          <div>
+            <p className="mb-3 text-[10px] tracking-[0.18em] uppercase text-brand/45">
+              Социальные сети
+            </p>
+            <a
+              href="https://vk.com/sweetsoflifehandmade"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="ВКонтакте"
+              className="inline-flex h-[34px] w-[34px] items-center justify-center rounded-full bg-[#4c75a3] text-white transition-all hover:scale-110 hover:shadow-[0_0_16px_rgba(76,117,163,0.45)]"
+            >
+              <VK />
+            </a>
           </div>
-        ))}
+        </div>
 
-        <div className="flex-1 pl-5">
-          <a
-            href="https://vk.com/sweetsoflifehandmade"
-            className="inline-block w-8 h-8 rounded-full bg-[#5f7d9d] hover:shadow-[0_0_10px_0_#5f7d9d]"
-            aria-label="ВКонтакте"
-          />
+        <div className="flex flex-wrap items-center justify-between gap-2.5 border-t border-brand/[0.07] py-4 pb-6">
+          <p className="text-[11px] tracking-[0.04em] text-brand/40">
+            © 2026 интернет-магазин «Sweets Of Life»
+          </p>
         </div>
       </div>
-
-      <p className="mt-2.5 ml-7 text-sm">
-        &copy; 2026 интернет-магазин &laquo;Sweets Of Life&raquo;
-      </p>
     </footer>
   );
 }

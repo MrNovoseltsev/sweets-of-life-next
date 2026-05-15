@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/features/cart/model/CartContext";
 import { AuthProvider } from "@/features/auth/model/AuthContext";
@@ -17,6 +18,14 @@ const scriptbl = localFont({
   display: "swap",
 });
 
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin", "cyrillic"],
+  weight: ["300", "400", "500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Sweets of Life",
   description: "Авторские украшения ручной работы",
@@ -31,7 +40,10 @@ export default async function RootLayout({
   const { data: { user } } = await supabase.auth.getUser();
 
   return (
-    <html lang="ru" className={`${boblic.variable} ${scriptbl.variable}`}>
+    <html
+      lang="ru"
+      className={`${boblic.variable} ${scriptbl.variable} ${cormorant.variable}`}
+    >
       <body>
         <AuthProvider initialUser={user}>
           <CartProvider>{children}</CartProvider>

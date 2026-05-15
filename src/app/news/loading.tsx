@@ -4,27 +4,24 @@ import { Skeleton } from "@/shared/ui/Skeleton";
 export default function NewsLoading() {
   return (
     <PageLayout>
-      <section className="px-2.5 py-4">
-        <Skeleton className="h-8 w-32 mb-2" />
-        <div className="w-full h-px bg-brand/20 ml-0 mb-4" />
+      <section className="sol-container py-11">
+        <Skeleton className="mb-7 h-3 w-40" />
+        <Skeleton className="mb-5 h-9 w-44" />
 
-        <div className="flex flex-col gap-6 ml-2.5">
-          {Array.from({ length: 5 }).map((_, i) => (
-            <div key={i} className="flex gap-5 items-start">
-              <Skeleton className="w-[180px] h-[180px] shrink-0 rounded-lg" />
-              <div className="flex flex-col gap-2 flex-1 pt-1">
-                <Skeleton className="h-3 w-20" />
-                <Skeleton className="h-5 w-3/4" />
-                <Skeleton className="h-4 w-full" />
-                <Skeleton className="h-4 w-5/6" />
+        <div className="grid grid-cols-1 gap-6 [grid-template-columns:repeat(auto-fill,minmax(280px,1fr))]">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <div
+              key={i}
+              className="overflow-hidden rounded-[12px] border border-brand/[0.09] bg-white"
+            >
+              <Skeleton className="h-[200px] w-full rounded-none" />
+              <div className="flex flex-col gap-2 px-[18px] pb-5 pt-4">
+                <Skeleton className="h-2.5 w-24" />
+                <Skeleton className="h-5 w-4/5" />
+                <Skeleton className="h-3 w-full" />
+                <Skeleton className="h-3 w-5/6" />
               </div>
             </div>
-          ))}
-        </div>
-
-        <div className="flex gap-2 ml-2.5 mt-8">
-          {Array.from({ length: 3 }).map((_, i) => (
-            <Skeleton key={i} className="w-8 h-8 rounded-full" />
           ))}
         </div>
       </section>
