@@ -6,7 +6,7 @@ import type { Product } from '@/entities/product/model/types';
 
 type Props = {
   product: Pick<Product, 'sku' | 'name' | 'price' | 'image'>;
-  size?: 'sm' | 'md';
+  size?: 'sm' | 'md' | 'icon';
 };
 
 export default function BuyButton({ product, size = 'md' }: Props) {
@@ -14,7 +14,9 @@ export default function BuyButton({ product, size = 'md' }: Props) {
   const [hovered, setHovered] = useState(false);
   const inCart = state.items.some((i) => i.sku === product.sku);
 
-  function handleClick() {
+  function handleClick(e: React.MouseEvent) {
+    e.preventDefault();
+    e.stopPropagation();
     if (inCart) {
       dispatch({ type: 'REMOVE_ITEM', payload: { sku: product.sku } });
       return;
@@ -31,32 +33,44 @@ export default function BuyButton({ product, size = 'md' }: Props) {
     });
   }
 
-  const sizeClass = size === 'sm'
-    ? 'w-full py-3 text-[28px] desktop:py-1.5 desktop:text-sm'
-    : 'px-6 py-5 text-[32px] md:py-2.5 md:text-base';
+  // Icon variant — small round button for ProductCard overlay.
+  if (size === 'icon') {
+    return (
+      <button
+        onClick={handleClick}
+        aria-label={inCart ? 'Убрать из корзины' : 'В корзину'}
+        className={`flex h-[34px] w-[34px] items-center justify-center rounded-full transition-colors cursor-pointer ${
+          inCart
+            ? 'bg-brand-light text-brand'
+            : 'bg-brand text-white hover:bg-brand-mid'
+        }`}
+      >
+        <span className="text-[20px] leading-none">{inCart ? '✓' : '+'}</span>
+      </button>
+    );
+  }
 
-  // Mobile/tablet: inCart → always red. Desktop: inCart+hovered → red, inCart → green.
-  const inCartClass = hovered
-    ? 'bg-[#e05555] text-white'
-    : 'bg-[#e05555] desktop:bg-[#40d39d] text-white';
-
-  const desktopLabel = inCart
-    ? hovered ? 'Убрать из корзины' : 'Добавлено'
-    : 'В корзину';
-
-  const mobileLabel = inCart ? 'Убрать из корзины' : 'В корзину';
+  const isFull = size === 'md';
+  const label = inCart
+    ? hovered
+      ? 'Убрать из корзины'
+      : '✓ В корзине'
+    : 'Добавить в корзину';
 
   return (
     <button
       onClick={handleClick}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className={`rounded-lg font-medium transition-colors cursor-pointer ${sizeClass} ${
-        inCart ? inCartClass : 'bg-[#1e5945] text-white hover:bg-[#164030]'
+      className={`w-full rounded-full font-boblic tracking-[0.1em] transition-all cursor-pointer ${
+        isFull ? 'py-4 text-[13px]' : 'py-2.5 text-[12px]'
+      } ${
+        inCart
+          ? 'bg-brand-light text-brand hover:bg-brand-mid hover:text-white'
+          : 'bg-brand text-white hover:-translate-y-px hover:bg-brand-mid'
       }`}
     >
-      <span className="desktop:hidden">{mobileLabel}</span>
-      <span className="hidden desktop:inline">{desktopLabel}</span>
+      {label}
     </button>
   );
 }

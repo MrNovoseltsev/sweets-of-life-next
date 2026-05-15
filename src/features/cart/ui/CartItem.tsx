@@ -8,52 +8,42 @@ type Props = { item: CartItem };
 
 export default function CartItemRow({ item }: Props) {
   const { dispatch } = useCart();
+  const lineTotal = item.price * item.quantity;
 
   return (
-    <div className="flex flex-col md:flex-row gap-3 py-3 border-b border-brand/20">
-      {/* Image */}
-      <div className="relative w-full aspect-square md:w-16 md:h-16 md:aspect-auto shrink-0 rounded overflow-hidden bg-brand-light">
+    <div className="flex gap-3.5 border-b border-brand/[0.07] py-4 last:border-b-0">
+      <div className="relative h-[76px] w-[76px] shrink-0 overflow-hidden rounded-[10px] bg-brand-pale">
         <Image
           src={item.image}
           alt={item.name}
           fill
           className="object-cover"
-          sizes="(max-width: 767px) 100vw, 64px"
+          sizes="76px"
         />
       </div>
 
-      {/* Text content */}
-      <div className="flex flex-col flex-1 gap-1 min-w-0">
-        <p className="text-[28px] md:text-sm leading-tight truncate">{item.name}</p>
-        <p className="text-[28px] md:text-sm text-brand/70">{item.price.toLocaleString('ru-RU')} ₽</p>
+      <div className="flex min-w-0 flex-1 flex-col">
+        <p className="mb-1 font-display text-[16px] font-normal leading-[1.25] text-brand">
+          {item.name}
+        </p>
 
-        <div className="flex items-center justify-between mt-auto">
-          <span className="text-[28px] md:text-sm">{item.quantity} шт.</span>
-
-          {/* Total + delete — mobile only */}
-          <div className="flex items-center gap-6 md:hidden">
-            <p className="text-[28px] md:text-sm font-medium">{(item.price * item.quantity).toLocaleString('ru-RU')} ₽</p>
-            <button
-              onClick={() => dispatch({ type: 'REMOVE_ITEM', payload: { sku: item.sku } })}
-              className="text-brand/40 hover:text-brand cursor-pointer text-[48px] md:text-lg leading-none"
-              aria-label="Удалить"
-            >
-              ×
-            </button>
-          </div>
+        <div className="mt-auto flex items-center justify-between">
+          <span className="text-[13px] text-brand-mid">
+            {item.quantity} шт.
+          </span>
+          <span className="font-display text-[17px] font-medium text-brand">
+            {lineTotal.toLocaleString('ru-RU')} ₽
+          </span>
         </div>
-      </div>
 
-      {/* Right column — tablet+ only */}
-      <div className="hidden md:flex flex-col items-end justify-between shrink-0">
         <button
-          onClick={() => dispatch({ type: 'REMOVE_ITEM', payload: { sku: item.sku } })}
-          className="text-brand/40 hover:text-brand cursor-pointer text-lg leading-none"
-          aria-label="Удалить"
+          onClick={() =>
+            dispatch({ type: 'REMOVE_ITEM', payload: { sku: item.sku } })
+          }
+          className="mt-1.5 self-start text-[11px] uppercase tracking-[0.08em] text-brand-mid opacity-40 transition-opacity hover:opacity-100 cursor-pointer"
         >
-          ×
+          Удалить
         </button>
-        <p className="text-sm font-medium">{(item.price * item.quantity).toLocaleString('ru-RU')} ₽</p>
       </div>
     </div>
   );

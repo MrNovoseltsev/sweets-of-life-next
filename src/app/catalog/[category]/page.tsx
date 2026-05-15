@@ -23,11 +23,12 @@ export default async function CategoryPage({ params }: Props) {
 
   return (
     <PageLayout>
-      <section className="px-2.5 py-4">
+      <section className="sol-container py-11">
         <SortableSection
           products={products}
           category={category}
           breadcrumbItems={[
+            { label: "Главная", href: "/" },
             { label: "Каталог", href: "/catalog" },
             { label: meta.label },
           ]}

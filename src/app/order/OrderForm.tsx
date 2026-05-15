@@ -21,22 +21,24 @@ export default function OrderForm() {
   }, [orderState.success, dispatch]);
 
   if (!hydrated) {
-    return <div className="animate-pulse h-48 bg-[#1e5945]/5 rounded-lg" />;
+    return <div className="h-48 animate-pulse rounded-[16px] bg-brand/5" />;
   }
 
   if (orderState.success) {
     return (
-      <div className="border border-[#40d39d]/40 bg-[#40d39d]/5 rounded-xl px-6 py-8 text-center">
-        <p className="text-2xl md:text-xl mb-1">Заказ оформлен!</p>
-        <p className="text-[#1e5945]/70 mb-1">
-          Номер заказа: <strong>#{orderState.orderId}</strong>
+      <div className="rounded-[16px] border border-brand-light/40 bg-brand-light/5 px-7 py-9 text-center">
+        <p className="mb-1.5 font-display text-[26px] font-light text-brand">
+          Заказ оформлен!
         </p>
-        <p className="text-[#1e5945]/70 mb-6 text-sm">
-          Мы свяжемся с вами по электронной почте
+        <p className="mb-1 text-[14px] text-brand-mid">
+          Номер заказа: <strong className="text-brand">#{orderState.orderId}</strong>
+        </p>
+        <p className="mb-6 text-[13px] text-brand-mid/80">
+          Мы свяжемся с вами по электронной почте.
         </p>
         <Link
-          href="/catalog/bracelets"
-          className="text-sm text-[#40d39d] underline underline-offset-2 hover:text-[#1e5945] transition-colors"
+          href="/catalog"
+          className="inline-block rounded-full bg-brand px-7 py-3 font-boblic text-[12px] tracking-[0.1em] text-white transition-colors hover:bg-brand-mid"
         >
           Вернуться в каталог
         </Link>
@@ -46,11 +48,13 @@ export default function OrderForm() {
 
   if (!user) {
     return (
-      <div className="border border-[#1e5945]/20 rounded-xl px-6 py-8 text-center">
-        <p className="text-[#1e5945]/70 mb-4">Для оформления заказа необходимо войти в аккаунт</p>
+      <div className="rounded-[16px] border border-brand/[0.18] bg-white px-7 py-9 text-center">
+        <p className="mb-5 text-[14px] text-brand-mid">
+          Для оформления заказа необходимо войти в аккаунт.
+        </p>
         <button
           onClick={openAuthModal}
-          className="bg-[#1e5945] text-white rounded-lg px-6 py-2.5 text-sm hover:bg-[#164030] transition-colors cursor-pointer"
+          className="rounded-full bg-brand px-7 py-3 font-boblic text-[12px] tracking-[0.1em] text-white transition-colors hover:bg-brand-mid cursor-pointer"
         >
           Войти
         </button>
@@ -60,11 +64,11 @@ export default function OrderForm() {
 
   if (cart.items.length === 0) {
     return (
-      <div className="border border-[#1e5945]/20 rounded-xl px-6 py-8 text-center">
-        <p className="text-[#1e5945]/70 mb-4">Корзина пуста</p>
+      <div className="rounded-[16px] border border-brand/[0.18] bg-white px-7 py-9 text-center">
+        <p className="mb-5 text-[14px] text-brand-mid">Корзина пуста.</p>
         <Link
-          href="/catalog/bracelets"
-          className="text-sm text-[#40d39d] underline underline-offset-2"
+          href="/catalog"
+          className="inline-block rounded-full bg-brand px-7 py-3 font-boblic text-[12px] tracking-[0.1em] text-white transition-colors hover:bg-brand-mid"
         >
           Перейти в каталог
         </Link>
@@ -72,35 +76,46 @@ export default function OrderForm() {
     );
   }
 
-  const totalPrice = cart.items.reduce((sum, i) => sum + i.price * i.quantity, 0);
+  const totalPrice = cart.items.reduce(
+    (sum, i) => sum + i.price * i.quantity,
+    0,
+  );
   const totalCount = cart.items.reduce((sum, i) => sum + i.quantity, 0);
-  const displayName = (user.user_metadata?.name as string | undefined) ?? 'Клиент';
+  const displayName =
+    (user.user_metadata?.name as string | undefined) ?? 'Клиент';
 
   return (
     <form action={formAction} className="flex flex-col gap-6">
-      <input type="hidden" name="items" value={JSON.stringify(cart.items)} readOnly />
+      <input
+        type="hidden"
+        name="items"
+        value={JSON.stringify(cart.items)}
+        readOnly
+      />
 
       {/* Cart summary */}
-      <div className="border border-[#1e5945]/20 rounded-xl overflow-hidden">
+      <div className="overflow-hidden rounded-[16px] border border-brand/[0.09] bg-white">
         {cart.items.map((item) => (
           <div
             key={item.sku}
-            className="flex items-center gap-3 px-4 py-3 border-b border-[#1e5945]/10 last:border-0"
+            className="flex items-center gap-3.5 border-b border-brand/[0.07] px-4 py-3.5 last:border-0"
           >
             <Image
               src={item.image}
               alt={item.name}
-              width={40}
-              height={40}
-              className="rounded object-cover shrink-0"
+              width={44}
+              height={44}
+              className="shrink-0 rounded-[8px] object-cover"
             />
-            <div className="flex-1 min-w-0">
-              <p className="text-sm truncate">{item.name}</p>
-              <p className="text-xs text-[#1e5945]/60">
+            <div className="min-w-0 flex-1">
+              <p className="truncate font-display text-[15px] text-brand">
+                {item.name}
+              </p>
+              <p className="text-[12px] text-brand-mid/60">
                 {item.price.toLocaleString('ru-RU')} ₽ × {item.quantity}
               </p>
             </div>
-            <p className="text-sm font-medium shrink-0">
+            <p className="shrink-0 text-[14px] font-medium text-brand">
               {(item.price * item.quantity).toLocaleString('ru-RU')} ₽
             </p>
           </div>
@@ -108,41 +123,44 @@ export default function OrderForm() {
       </div>
 
       {/* Total */}
-      <div className="flex justify-between text-base font-medium border-t border-[#1e5945]/20 pt-3">
-        <span>Итого ({totalCount} шт.):</span>
-        <span>{totalPrice.toLocaleString('ru-RU')} ₽</span>
+      <div className="flex items-baseline justify-between border-t border-brand/10 pt-3.5">
+        <span className="font-boblic text-[12px] tracking-[0.1em] text-brand/55">
+          ИТОГО ({totalCount} шт.)
+        </span>
+        <span className="font-display text-[22px] font-normal text-brand">
+          {totalPrice.toLocaleString('ru-RU')} ₽
+        </span>
       </div>
 
       {/* Notes */}
-      <div className="flex flex-col gap-1.5">
-        <label className="text-sm text-[#1e5945]/70">
-          Комментарий к заказу <span className="text-[#1e5945]/40">(необязательно)</span>
+      <div>
+        <label className="mb-1.5 block text-[11px] tracking-[0.1em] text-brand/55">
+          Комментарий к заказу{' '}
+          <span className="text-brand/35">(необязательно)</span>
         </label>
         <textarea
           name="notes"
           rows={3}
           placeholder="Уточнения по доставке, пожелания..."
-          className="border border-[#1e5945]/30 rounded-lg px-3 py-2 text-sm outline-none focus:border-[#40d39d] transition-colors resize-none"
+          className="w-full resize-none rounded-[10px] border-[1.5px] border-brand/[0.18] bg-white/70 px-3.5 py-[11px] font-boblic text-[14px] text-brand outline-none transition-colors focus:border-brand-light focus:bg-white"
         />
       </div>
 
-      {/* Error */}
       {orderState.error && (
-        <p className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-3 py-2">
+        <p className="rounded-[10px] border border-red-200 bg-red-50 px-3 py-2 text-[13px] text-red-600">
           {orderState.error}
         </p>
       )}
 
-      {/* Account info */}
-      <p className="text-sm text-[#1e5945]/60">
+      <p className="text-[13px] text-brand-mid/60">
         Заказ будет оформлен на:{' '}
-        <strong className="text-[#1e5945]">{displayName}</strong>
+        <strong className="text-brand">{displayName}</strong>
       </p>
 
       <button
         type="submit"
         disabled={pending}
-        className="bg-[#1e5945] text-white rounded-xl py-3.5 text-base font-medium hover:bg-[#164030] transition-colors disabled:opacity-60 cursor-pointer"
+        className="w-full rounded-full bg-brand py-4 font-boblic text-[13px] tracking-[0.1em] text-white transition-colors hover:bg-brand-mid disabled:opacity-60 cursor-pointer"
       >
         {pending ? 'Оформляем...' : 'Подтвердить заказ'}
       </button>

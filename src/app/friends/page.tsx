@@ -1,4 +1,6 @@
 import PageLayout from "@/widgets/page-layout/ui/PageLayout";
+import Breadcrumbs from "@/shared/ui/Breadcrumbs";
+import SectionHeader from "@/shared/ui/SectionHeader";
 
 const friends = [
   {
@@ -27,26 +29,37 @@ const friends = [
 export default function FriendsPage() {
   return (
     <PageLayout>
-      <section className="px-5 py-4">
-        <h1 className="text-2xl font-normal mb-1">НАШИ ДРУЗЬЯ</h1>
-        <div className="w-full h-px bg-brand mb-4" />
+      <section className="sol-container py-11">
+        <Breadcrumbs
+          items={[{ label: "Главная", href: "/" }, { label: "Наши друзья" }]}
+        />
+        <SectionHeader title="Наши друзья" />
 
-        <p className="text-lg italic mb-6 max-w-[940px]">
-          Скажи мне, кто твой друг, и я скажу тебе, кто ты!
+        <p className="mb-7 max-w-[640px] font-display text-[clamp(18px,2.2vw,24px)] font-light italic text-brand-mid">
+          Скажи мне, кто твой друг, и я скажу тебе, кто ты.
         </p>
 
-        <div className="flex flex-col gap-6 max-w-[940px]">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {friends.map((f) => (
-            <div key={f.name} className="flex flex-col gap-1 border-l-2 border-brand pl-4">
-              <h2 className="text-xl font-normal">{f.name}</h2>
-              <p className="text-sm text-brand/60">{f.tagline}</p>
-              <p className="text-base leading-relaxed">{f.description}</p>
+            <div
+              key={f.name}
+              className="rounded-[14px] border border-brand/[0.09] bg-white p-6"
+            >
+              <h2 className="mb-1 font-display text-[20px] font-normal text-brand">
+                {f.name}
+              </h2>
+              <p className="mb-3 text-[12px] tracking-[0.04em] text-brand-mid/55">
+                {f.tagline}
+              </p>
+              <p className="text-[13px] leading-[1.6] text-brand-mid/85">
+                {f.description}
+              </p>
               {f.url && (
                 <a
                   href={f.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm underline hover:font-bold mt-1"
+                  className="mt-3 inline-block text-[12px] uppercase tracking-[0.08em] text-brand-mid underline-offset-2 hover:underline"
                 >
                   Перейти на сайт
                 </a>

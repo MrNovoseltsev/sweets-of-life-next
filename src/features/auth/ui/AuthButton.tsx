@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { createClient as createBrowserSupabaseClient } from '@/shared/lib/supabase/client';
 import { useAuth } from '../model/AuthContext';
+import UserIcon from '@/shared/ui/icons/User';
 
 export default function AuthButton() {
   const { user, openAuthModal } = useAuth();
@@ -18,9 +19,10 @@ export default function AuthButton() {
     return (
       <button
         onClick={openAuthModal}
-        className="text-sm text-[#1e5945] border border-[#1e5945]/30 rounded-lg px-3 py-1.5 hover:border-[#40d39d] hover:text-[#40d39d] transition-colors cursor-pointer whitespace-nowrap"
+        aria-label="Войти"
+        className="flex h-[38px] w-[38px] items-center justify-center rounded-full border-[1.5px] border-brand/[0.18] text-brand transition-colors hover:border-brand hover:bg-brand hover:text-white cursor-pointer"
       >
-        Войти
+        <UserIcon />
       </button>
     );
   }
@@ -30,13 +32,16 @@ export default function AuthButton() {
 
   return (
     <div className="flex items-center gap-2">
-      <span className="text-sm text-[#1e5945] max-w-[100px] truncate hidden md:block" title={label}>
+      <span
+        className="hidden max-w-[110px] truncate text-[13px] text-brand md:block"
+        title={label}
+      >
         {label}
       </span>
       <button
         onClick={handleSignOut}
-        className="text-sm text-[#1e5945]/60 hover:text-[#1e5945] transition-colors cursor-pointer whitespace-nowrap"
         title="Выйти"
+        className="text-[12px] tracking-[0.06em] text-brand-mid/60 transition-colors hover:text-brand cursor-pointer whitespace-nowrap"
       >
         Выйти
       </button>

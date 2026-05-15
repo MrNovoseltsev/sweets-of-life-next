@@ -3,35 +3,28 @@
 import { useState } from 'react';
 import { useCart } from '../model/CartContext';
 import CartDrawer from './CartDrawer';
+import CartIcon from '@/shared/ui/icons/Cart';
 
 export default function CartButton() {
   const { state, hydrated } = useCart();
   const [open, setOpen] = useState(false);
 
   const totalItems = state.items.reduce((n, i) => n + i.quantity, 0);
+  const hasItems = hydrated && totalItems > 0;
 
   return (
     <>
-      <div className="relative group">
+      <div className="relative">
         <button
           onClick={() => setOpen(true)}
-          className="relative flex items-center cursor-pointer text-brand hover:text-[#40d39d] transition-colors"
           aria-label="Корзина"
+          className="flex h-[38px] w-[38px] items-center justify-center rounded-full border-[1.5px] border-brand/[0.18] text-brand transition-colors hover:border-brand hover:bg-brand hover:text-white cursor-pointer"
         >
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="9" cy="21" r="1" />
-            <circle cx="20" cy="21" r="1" />
-            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
-          </svg>
-          {hydrated && totalItems > 0 && (
-            <span className="absolute -top-1 -right-1.5 flex items-center justify-center w-4 h-4 rounded-full bg-[#1e5945] text-white text-[10px] leading-none">
-              {totalItems}
-            </span>
-          )}
+          <CartIcon />
         </button>
-        <span className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-full mt-1.5 whitespace-nowrap rounded bg-[#1e5945] text-white text-xs px-2 py-0.5 opacity-0 group-hover:opacity-100 transition-opacity">
-          Корзина
-        </span>
+        {hasItems && (
+          <span className="absolute right-[7px] top-[7px] h-[7px] w-[7px] rounded-full border-2 border-bg bg-brand-light" />
+        )}
       </div>
 
       <CartDrawer open={open} onClose={() => setOpen(false)} />

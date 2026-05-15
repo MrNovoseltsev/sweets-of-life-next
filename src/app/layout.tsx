@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/features/cart/model/CartContext";
 import { AuthProvider } from "@/features/auth/model/AuthContext";
@@ -14,6 +15,14 @@ const boblic = localFont({
 const scriptbl = localFont({
   src: "../../public/fonts/SCRIPTBL.ttf",
   variable: "--font-script",
+  display: "swap",
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin", "cyrillic"],
+  weight: ["300", "400", "500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
   display: "swap",
 });
 
@@ -37,8 +46,15 @@ export default async function RootLayout({
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
   return (
-    <html lang="ru" className={`${boblic.variable} ${scriptbl.variable}`}>
-      <body style={{ backgroundImage: `url(${basePath}/images/patterns/bg-outer.png)` }}>
+    <html
+      lang="ru"
+      className={`${boblic.variable} ${scriptbl.variable} ${cormorant.variable}`}
+    >
+      <body
+        style={{
+          backgroundImage: `url(${basePath}/images/patterns/bg-outer.png)`,
+        }}
+      >
         <AuthProvider initialUser={user}>
           <CartProvider>{children}</CartProvider>
         </AuthProvider>
